@@ -1,4 +1,5 @@
-﻿using MyLibrary;
+﻿using ClassLibrary;
+using MyLibrary;
 using MyLibrary.EntityData;
 using System;
 using System.Collections.Generic;
@@ -9,18 +10,26 @@ namespace SMART_ERP_System
 {
     public partial class LoginForm : Form
     {
-       public LoginForm()
+        public LoginForm()
         {
             InitializeComponent();
         }
 
+        public string EmployeeName
+        {
+            get
+            {
+                return txbEmployeeName.Text;
+            }
+        }
+
         private void TxbEmployeeCode_KeyUp(object sender, KeyEventArgs e)
         {
-            if(e.KeyCode == Keys.Enter)
+            if (e.KeyCode == Keys.Enter)
             {
                 string name = CheckLoginID(txbEmployeeCode.Text);
 
-                if(name==null)
+                if (name == null)
                     MessageBox.Show("Test");
 
                 txbEmployeeName.Text = name;
@@ -46,9 +55,33 @@ namespace SMART_ERP_System
 
         private void BtnOk_Click(object sender, EventArgs e)
         {
+            if(CheckPassWord(txbPassWord.Text)==true)
+                Close();
+        }
 
+        private bool CheckPassWord(string text)
+        {
+            using (ERPEntities entities = new ERPEntities())
+            {
+                string pwd = entities.사원등록
+                    .Where(x => x.암호 == text)
+                    .Select(x => x.암호)
+                    .ToList().FirstOrDefault();
 
-            Close();
+                if (pwd == null)
+                {
+                    MessageBox.Show("틀린 암호");
+                    return false;
+                }                    
+
+                LoginSuccess();
+                return true;
+            }
+        }
+
+        public void LoginSuccess()
+        {
+            MessageBox.Show($"{txbEmployeeName.Text}님이 로그인");
         }
     }
 }

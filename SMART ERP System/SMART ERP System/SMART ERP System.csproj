@@ -191,9 +191,9 @@
     <Folder Include="MenuUserControl\6.MES\6.공지사항\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="D:\source\src\repos\MyLibrary\MyLibrary\MyLibrary.csproj">
-      <Project>{cd7be6ab-e233-4e7c-95a1-bd11e132d53e}</Project>
-      <Name>MyLibrary</Name>
+    <ProjectReference Include="..\ClassLibrary\ClassLibrary.csproj">
+      <Project>{118D1788-46A9-45CF-88E9-6388FCBAA125}</Project>
+      <Name>ClassLibrary</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

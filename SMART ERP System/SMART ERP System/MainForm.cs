@@ -14,16 +14,18 @@ namespace SMART_ERP_System
 {    
     public partial class MainForm : MetroForm
     {
+        LoginForm loginForm;
         public MainForm()
         {
-            LoginForm loginForm = new LoginForm();
+            loginForm = new LoginForm();
             loginForm.ShowDialog();
 
             InitializeComponent();
         }
 
         private void MainForm_Load(object sender, EventArgs e)
-        {            
+        {
+            Text = "사용자 : "+ $"{loginForm.EmployeeName}";
         }
     }
 }
