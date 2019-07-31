@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{716914F6-F325-45FC-B7F1-B78C3C918C76}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SMART_ERP_System</RootNamespace>
+    <AssemblyName>SMART ERP System</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v19.1, Version=19.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v19.1.Core, Version=19.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.TreeMap.v19.1.Core, Version=19.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v19.1, Version=19.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v19.1, Version=19.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraLayout.v19.1, Version=19.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v19.1, Version=19.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v19.1, Version=19.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeMap.v19.1, Version=19.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="MainForm_Control\UserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainForm_Control\UserControl1.Designer.cs">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="MainForm_Control\UserControl1.resx">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="MenuUserControl\1.회계관리\1.전표장부관리\1-1.전표등록\" />
+    <Folder Include="MenuUserControl\1.회계관리\1.전표장부관리\1-2.분개장\" />
+    <Folder Include="MenuUserControl\1.회계관리\1.전표장부관리\1-3.매입매출장\" />
+    <Folder Include="MenuUserControl\1.회계관리\1.전표장부관리\1-4.기간비용현황\" />
+    <Folder Include="MenuUserControl\1.회계관리\2.결산재무제표관리\2-1.결산자료입력\" />
+    <Folder Include="MenuUserControl\1.회계관리\2.결산재무제표관리\2-2.합계잔액시산표\" />
+    <Folder Include="MenuUserControl\1.회계관리\2.결산재무제표관리\2-3.재무상태표\" />
+    <Folder Include="MenuUserControl\1.회계관리\2.결산재무제표관리\2-4.손익계산서\" />
+    <Folder Include="MenuUserControl\1.회계관리\2.결산재무제표관리\2-5.원가보고서\" />
+    <Folder Include="MenuUserControl\1.회계관리\3.자금관리\3-1.자금계획달력\" />
+    <Folder Include="MenuUserControl\1.회계관리\3.자금관리\3-2.자금현황,입출금내역\" />
+    <Folder Include="MenuUserControl\1.회계관리\4.예산관리\4-1.예산신청,편성,조정입력\" />
+    <Folder Include="MenuUserControl\1.회계관리\4.예산관리\4-2.예산실적현황\" />
+    <Folder Include="MenuUserControl\1.회계관리\5.고정자산관리\5-1.고정자산등록\" />
+    <Folder Include="MenuUserControl\1.회계관리\5.고정자산관리\5-2.고정자산관리대장\" />
+    <Folder Include="MenuUserControl\1.회계관리\6.업무용승용차 차량등록\" />
+    <Folder Include="MenuUserControl\1.회계관리\7.부가가치세관리\7-1.부가세신고서\" />
+    <Folder Include="MenuUserControl\1.회계관리\7.부가가치세관리\7-2.세금계산서합계표\" />
+    <Folder Include="MenuUserControl\1.회계관리\8.기초정보관리\8-1.계정과목등록\" />
+    <Folder Include="MenuUserControl\2.인사관리\1.기초정보관리\1-1.소득,세액공제 환경설정\" />
+    <Folder Include="MenuUserControl\2.인사관리\1.기초정보관리\1-2.급,상여 지급일자 등록\" />
+    <Folder Include="MenuUserControl\2.인사관리\1.기초정보관리\1-3.인사,급여환경설정\" />
+    <Folder Include="MenuUserControl\2.인사관리\2.인사관리\2-1.인사정보등록\" />
+    <Folder Include="MenuUserControl\2.인사관리\2.인사관리\2-2.사원 입,퇴사현황\" />
+    <Folder Include="MenuUserControl\2.인사관리\3.급여관리\3-1.급여입력\" />
+    <Folder Include="MenuUserControl\2.인사관리\3.급여관리\3-2.급여대장\" />
+    <Folder Include="MenuUserControl\2.인사관리\3.급여관리\3-3.사원별 급,상여 변동현황\" />
+    <Folder Include="MenuUserControl\2.인사관리\4.퇴직정산관리\4-1.퇴직기준설정\" />
+    <Folder Include="MenuUserControl\2.인사관리\4.퇴직정산관리\4-2.퇴직금산정\" />
+    <Folder Include="MenuUserControl\2.인사관리\4.퇴직정산관리\4-3.퇴직금추계액\" />
+    <Folder Include="MenuUserControl\2.인사관리\4.퇴직정산관리\4-4.퇴직금산정현황\" />
+    <Folder Include="MenuUserControl\2.인사관리\5.세무관리\5-1.지방소득세 특별징수명세,납부서\" />
+    <Folder Include="MenuUserControl\2.인사관리\5.세무관리\5-2.원천징수 이행상황신고서\" />
+    <Folder Include="MenuUserControl\3.생산관리\1.기초정보관리\1-1.기준정보\" />
+    <Folder Include="MenuUserControl\3.생산관리\1.기초정보관리\1-2.BOM 및 Part Number에 의한 구매소요량 계산 및 조정\" />
+    <Folder Include="MenuUserControl\3.생산관리\2.공정정보\" />
+    <Folder Include="MenuUserControl\3.생산관리\3.설비정보\" />
+    <Folder Include="MenuUserControl\3.생산관리\4.생산정보\4-1.생산현황 조회\" />
+    <Folder Include="MenuUserControl\3.생산관리\4.생산정보\4-2.생산실적 입력\" />
+    <Folder Include="MenuUserControl\3.생산관리\4.생산정보\4-3.일일 , 주간 생산 일보\" />
+    <Folder Include="MenuUserControl\3.생산관리\5.재공관리\" />
+    <Folder Include="MenuUserControl\3.생산관리\6.외주관리\6-1.외주 입고\" />
+    <Folder Include="MenuUserControl\3.생산관리\6.외주관리\6-2.외주 자재출고\" />
+    <Folder Include="MenuUserControl\3.생산관리\6.외주관리\6-3.외주발주현황\" />
+    <Folder Include="MenuUserControl\3.생산관리\6.외주관리\6-4.외주재고관리\" />
+    <Folder Include="MenuUserControl\4.물류관리\1.수주등록\" />
+    <Folder Include="MenuUserControl\4.물류관리\2.구매관리\" />
+    <Folder Include="MenuUserControl\4.물류관리\3.구매현황\" />
+    <Folder Include="MenuUserControl\4.물류관리\4.재고관리\" />
+    <Folder Include="MenuUserControl\4.물류관리\5.재고조정\" />
+    <Folder Include="MenuUserControl\4.물류관리\6.기초정보관리\" />
+    <Folder Include="MenuUserControl\4.물류관리\7.매출액\" />
+    <Folder Include="MenuUserControl\4.물류관리\8.예상매출액\" />
+    <Folder Include="MenuUserControl\4.물류관리\9.출고처리\" />
+    <Folder Include="MenuUserControl\5.시스템관리\1.시스템 환경설정 및 사용 권한 설정\" />
+    <Folder Include="MenuUserControl\5.시스템관리\2.회사정보 등록\" />
+    <Folder Include="MenuUserControl\5.시스템관리\3.거래처, 프로젝트, 품목, 물류 등록\" />
+    <Folder Include="MenuUserControl\6.MES\1.작업지시가공 및 분배\" />
+    <Folder Include="MenuUserControl\6.MES\2.실시간 작업지시 업데이트\" />
+    <Folder Include="MenuUserControl\6.MES\3.목표대 실적 달성률 시각화\" />
+    <Folder Include="MenuUserControl\6.MES\4.품질관리\" />
+    <Folder Include="MenuUserControl\6.MES\5.생산실적등록\" />
+    <Folder Include="MenuUserControl\6.MES\6.공지사항\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:\source\src\repos\MyLibrary\MyLibrary\MyLibrary.csproj">
+      <Project>{cd7be6ab-e233-4e7c-95a1-bd11e132d53e}</Project>
+      <Name>MyLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
