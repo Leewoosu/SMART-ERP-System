@@ -242,6 +242,15 @@
     <Property Name="납품업체번호" Type="int" Nullable="false" />
     <Property Name="납품업체명" Type="nvarchar" MaxLength="50" Nullable="false" />
   </EntityType>
+  <EntityType Name="메뉴등록">
+    <Key>
+      <PropertyRef Name="CodeNum" />
+    </Key>
+    <Property Name="CodeNum" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="PrentKey" Type="nchar" MaxLength="10" />
+    <Property Name="ControlName" Type="nvarchar" MaxLength="30" />
+  </EntityType>
   <EntityType Name="메뉴별권한설정">
     <Key>
       <PropertyRef Name="메뉴별권한설정코드" />
@@ -467,8 +476,8 @@
     <Property Name="제품번호" Type="int" Nullable="false" />
     <Property Name="주문수량" Type="int" Nullable="false" />
     <Property Name="납품업체번호" Type="int" Nullable="false" />
-    <Property Name="주문일" Type="nvarchar" MaxLength="50" Nullable="false" />
-    <Property Name="납기일" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="주문일" Type="date" />
+    <Property Name="납기일" Type="date" />
   </EntityType>
   <EntityType Name="수주확인리스트">
     <Key>
@@ -675,10 +684,21 @@
     </Key>
     <Property Name="제품번호" Type="int" Nullable="false" />
     <Property Name="제품명" Type="nvarchar" MaxLength="50" Nullable="false" />
-    <Property Name="안전재고량" Type="int" Nullable="false" />
-    <Property Name="자재명세번호" Type="int" Nullable="false" />
-    <Property Name="재고량" Type="int" Nullable="false" />
-    <Property Name="제품단가" Type="int" Nullable="false" />
+    <Property Name="안전재고량" Type="int" />
+    <Property Name="자재명세번호" Type="int" />
+    <Property Name="재고량" Type="int" />
+    <Property Name="품목군" Type="nvarchar" MaxLength="50" />
+    <Property Name="검사여부" Type="nvarchar" MaxLength="50" />
+    <Property Name="일별생산량" Type="int" />
+    <Property Name="표준원가" Type="int" />
+    <Property Name="실제원가" Type="int" />
+    <Property Name="최종공정" Type="nvarchar" MaxLength="50" />
+    <Property Name="전공정" Type="nvarchar" MaxLength="50" />
+    <Property Name="후공정" Type="nvarchar" MaxLength="50" />
+    <Property Name="외경" Type="int" />
+    <Property Name="층" Type="int" />
+    <Property Name="리드타임" Type="int" />
+    <Property Name="LOT수량" Type="int" />
   </EntityType>
   <EntityType Name="코드">
     <Key>
@@ -719,11 +739,31 @@
     <Property Name="퇴직소득유형" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="항목명" Type="nvarchar" MaxLength="20" Nullable="false" />
   </EntityType>
+  <EntityType Name="투입현황">
+    <Key>
+      <PropertyRef Name="관리번호" />
+    </Key>
+    <Property Name="관리번호" Type="nchar" MaxLength="20" Nullable="false" />
+    <Property Name="품목번호" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="자재불출" Type="bit" Nullable="false" />
+    <Property Name="투입일" Type="date" Nullable="false" />
+    <Property Name="투입수량" Type="nchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="투입현황1">
+    <Key>
+      <PropertyRef Name="관리번호" />
+    </Key>
+    <Property Name="관리번호" Type="nchar" MaxLength="20" Nullable="false" />
+    <Property Name="품목번호" Type="nchar" MaxLength="20" Nullable="false" />
+    <Property Name="자재불출" Type="bit" Nullable="false" />
+    <Property Name="투입수량" Type="int" Nullable="false" />
+    <Property Name="투입일" Type="date" Nullable="false" />
+  </EntityType>
   <EntityType Name="품목정보">
     <Key>
-      <PropertyRef Name="품목정보" />
+      <PropertyRef Name="품목번호" />
     </Key>
-    <Property Name="품목정보" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="품목번호" Type="nvarchar" MaxLength="30" Nullable="false" />
     <Property Name="전공정" Type="nvarchar" MaxLength="10" />
     <Property Name="후공정" Type="nvarchar" MaxLength="10" />
     <Property Name="외경" Type="nvarchar" MaxLength="10" />
@@ -731,6 +771,19 @@
     <Property Name="층" Type="nvarchar" MaxLength="6" />
     <Property Name="최종공정" Type="nvarchar" MaxLength="10" />
   </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'ERP.dbo.현장실적현황' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="현장실적현황">
+          <Property Name="관리번호" Type="nchar" MaxLength="20" />
+          <Property Name="품목번호" Type="nchar" MaxLength="20" />
+          <Property Name="설비명" Type="nchar" MaxLength="10" />
+          <Property Name="공정명" Type="nchar" MaxLength="10" />
+          <Property Name="작업자" Type="nchar" MaxLength="10" />
+          <Property Name="작업시작" Type="datetime" />
+          <Property Name="작업종료" Type="datetime" />
+          <Property Name="실적수량" Type="int" />
+          <Property Name="완료유무" Type="bit" />
+        </EntityType>-->
   <EntityType Name="환경요소">
     <Key>
       <PropertyRef Name="환경요소ID" />
@@ -1376,6 +1429,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <!--Errors Found During Generation:
+error 6004: The table 'ERP.dbo.현장실적현황' is referenced by a relationship, but cannot be found.
+        <Association Name="FK_현장실적현황_투입현황1" />-->
   <Association Name="FK_환경요소_기준설정">
     <End Role="기준설정" Type="Self.기준설정" Multiplicity="1" />
     <End Role="환경요소" Type="Self.환경요소" Multiplicity="*" />
@@ -1423,6 +1479,7 @@
     <EntitySet Name="기간비용계산방법" EntityType="Self.기간비용계산방법" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="기준설정" EntityType="Self.기준설정" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="납품업체" EntityType="Self.납품업체" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="메뉴등록" EntityType="Self.메뉴등록" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="메뉴별권한설정" EntityType="Self.메뉴별권한설정" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="발주리스트" EntityType="Self.발주리스트" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="발주서" EntityType="Self.발주서" Schema="dbo" store:Type="Tables" />
@@ -1467,6 +1524,8 @@
     <EntitySet Name="퇴직공제항목" EntityType="Self.퇴직공제항목" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="퇴직기준설명" EntityType="Self.퇴직기준설명" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="퇴직지급항목" EntityType="Self.퇴직지급항목" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="투입현황" EntityType="Self.투입현황" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="투입현황1" EntityType="Self.투입현황1" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="품목정보" EntityType="Self.품목정보" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="환경요소" EntityType="Self.환경요소" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="회사기본등록사항" EntityType="Self.회사기본등록사항" Schema="dbo" store:Type="Tables" />

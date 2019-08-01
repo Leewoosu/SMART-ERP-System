@@ -22,6 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -77,25 +78,145 @@
     <Compile Include="LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="MainForm_Control\LoginControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainForm_Control\LoginControl.Designer.cs">
+      <DependentUpon>LoginControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="MainForm_Control\UserControl1.cs">
+    <Compile Include="MenuUserControl\1.회계관리\1.전표장부관리\1-1.전표등록\전표등록.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="MainForm_Control\UserControl1.Designer.cs">
-      <DependentUpon>UserControl1.cs</DependentUpon>
+    <Compile Include="MenuUserControl\1.회계관리\1.전표장부관리\1-1.전표등록\전표등록.designer.cs">
+      <DependentUpon>전표등록.cs</DependentUpon>
     </Compile>
+    <Compile Include="MenuUserControl\1.회계관리\1.전표장부관리\1-1.전표등록\전표출력.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuUserControl\1.회계관리\1.전표장부관리\1-1.전표등록\전표출력.designer.cs">
+      <DependentUpon>전표출력.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuUserControl\1.회계관리\1.전표장부관리\1-2.분개장\분개장.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuUserControl\1.회계관리\1.전표장부관리\1-2.분개장\분개장.designer.cs">
+      <DependentUpon>분개장.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuUserControl\1.회계관리\2.결산재무제표관리\2-1.결산자료입력\결산자료입력.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuUserControl\1.회계관리\2.결산재무제표관리\2-1.결산자료입력\결산자료입력.designer.cs">
+      <DependentUpon>결산자료입력.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuUserControl\1.회계관리\2.결산재무제표관리\2-2.합계잔액시산표\합계잔액시산표.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuUserControl\1.회계관리\2.결산재무제표관리\2-2.합계잔액시산표\합계잔액시산표.designer.cs">
+      <DependentUpon>합계잔액시산표.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuUserControl\1.회계관리\2.결산재무제표관리\2-3.재무상태표\재무상태표.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuUserControl\1.회계관리\2.결산재무제표관리\2-3.재무상태표\재무상태표.designer.cs">
+      <DependentUpon>재무상태표.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuUserControl\1.회계관리\2.결산재무제표관리\2-4.손익계산서\손익계산서.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuUserControl\1.회계관리\2.결산재무제표관리\2-4.손익계산서\손익계산서.designer.cs">
+      <DependentUpon>손익계산서.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuUserControl\1.회계관리\2.결산재무제표관리\2-5.원가보고서\원가보고서.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuUserControl\1.회계관리\2.결산재무제표관리\2-5.원가보고서\원가보고서.designer.cs">
+      <DependentUpon>원가보고서.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuUserControl\1.회계관리\5.고정자산관리\5-1.고정자산등록\고정자산등록.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuUserControl\1.회계관리\5.고정자산관리\5-1.고정자산등록\고정자산등록.designer.cs">
+      <DependentUpon>고정자산등록.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuUserControl\1.회계관리\5.고정자산관리\5-2.고정자산관리대장\고정자산관리대장.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuUserControl\1.회계관리\5.고정자산관리\5-2.고정자산관리대장\고정자산관리대장.designer.cs">
+      <DependentUpon>고정자산관리대장.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuUserControl\1.회계관리\6.업무용승용차 차량등록\업무용승용차 차량등록.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuUserControl\1.회계관리\6.업무용승용차 차량등록\업무용승용차 차량등록.designer.cs">
+      <DependentUpon>업무용승용차 차량등록.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuUserControl\1.회계관리\8.기초정보관리\8-1.계정과목등록\계정과목등록.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuUserControl\1.회계관리\8.기초정보관리\8-1.계정과목등록\계정과목등록.designer.cs">
+      <DependentUpon>계정과목등록.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrintForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintForm.Designer.cs">
+      <DependentUpon>PrintForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MainForm_Control\LoginControl.resx">
+      <DependentUpon>LoginControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuUserControl\1.회계관리\1.전표장부관리\1-1.전표등록\전표등록.resx">
+      <DependentUpon>전표등록.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuUserControl\1.회계관리\1.전표장부관리\1-1.전표등록\전표출력.resx">
+      <DependentUpon>전표출력.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuUserControl\1.회계관리\1.전표장부관리\1-2.분개장\분개장.resx">
+      <DependentUpon>분개장.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuUserControl\1.회계관리\2.결산재무제표관리\2-1.결산자료입력\결산자료입력.resx">
+      <DependentUpon>결산자료입력.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuUserControl\1.회계관리\2.결산재무제표관리\2-2.합계잔액시산표\합계잔액시산표.resx">
+      <DependentUpon>합계잔액시산표.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuUserControl\1.회계관리\2.결산재무제표관리\2-3.재무상태표\재무상태표.resx">
+      <DependentUpon>재무상태표.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuUserControl\1.회계관리\2.결산재무제표관리\2-4.손익계산서\손익계산서.resx">
+      <DependentUpon>손익계산서.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuUserControl\1.회계관리\2.결산재무제표관리\2-5.원가보고서\원가보고서.resx">
+      <DependentUpon>원가보고서.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuUserControl\1.회계관리\5.고정자산관리\5-1.고정자산등록\고정자산등록.resx">
+      <DependentUpon>고정자산등록.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuUserControl\1.회계관리\5.고정자산관리\5-2.고정자산관리대장\고정자산관리대장.resx">
+      <DependentUpon>고정자산관리대장.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuUserControl\1.회계관리\6.업무용승용차 차량등록\업무용승용차 차량등록.resx">
+      <DependentUpon>업무용승용차 차량등록.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuUserControl\1.회계관리\8.기초정보관리\8-1.계정과목등록\계정과목등록.resx">
+      <DependentUpon>계정과목등록.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintForm.resx">
+      <DependentUpon>PrintForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -108,9 +229,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="MainForm_Control\UserControl1.resx">
-      <DependentUpon>UserControl1.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -126,25 +244,14 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="MenuUserControl\1.회계관리\1.전표장부관리\1-1.전표등록\" />
-    <Folder Include="MenuUserControl\1.회계관리\1.전표장부관리\1-2.분개장\" />
     <Folder Include="MenuUserControl\1.회계관리\1.전표장부관리\1-3.매입매출장\" />
     <Folder Include="MenuUserControl\1.회계관리\1.전표장부관리\1-4.기간비용현황\" />
-    <Folder Include="MenuUserControl\1.회계관리\2.결산재무제표관리\2-1.결산자료입력\" />
-    <Folder Include="MenuUserControl\1.회계관리\2.결산재무제표관리\2-2.합계잔액시산표\" />
-    <Folder Include="MenuUserControl\1.회계관리\2.결산재무제표관리\2-3.재무상태표\" />
-    <Folder Include="MenuUserControl\1.회계관리\2.결산재무제표관리\2-4.손익계산서\" />
-    <Folder Include="MenuUserControl\1.회계관리\2.결산재무제표관리\2-5.원가보고서\" />
     <Folder Include="MenuUserControl\1.회계관리\3.자금관리\3-1.자금계획달력\" />
     <Folder Include="MenuUserControl\1.회계관리\3.자금관리\3-2.자금현황,입출금내역\" />
     <Folder Include="MenuUserControl\1.회계관리\4.예산관리\4-1.예산신청,편성,조정입력\" />
     <Folder Include="MenuUserControl\1.회계관리\4.예산관리\4-2.예산실적현황\" />
-    <Folder Include="MenuUserControl\1.회계관리\5.고정자산관리\5-1.고정자산등록\" />
-    <Folder Include="MenuUserControl\1.회계관리\5.고정자산관리\5-2.고정자산관리대장\" />
-    <Folder Include="MenuUserControl\1.회계관리\6.업무용승용차 차량등록\" />
     <Folder Include="MenuUserControl\1.회계관리\7.부가가치세관리\7-1.부가세신고서\" />
     <Folder Include="MenuUserControl\1.회계관리\7.부가가치세관리\7-2.세금계산서합계표\" />
-    <Folder Include="MenuUserControl\1.회계관리\8.기초정보관리\8-1.계정과목등록\" />
     <Folder Include="MenuUserControl\2.인사관리\1.기초정보관리\1-1.소득,세액공제 환경설정\" />
     <Folder Include="MenuUserControl\2.인사관리\1.기초정보관리\1-2.급,상여 지급일자 등록\" />
     <Folder Include="MenuUserControl\2.인사관리\1.기초정보관리\1-3.인사,급여환경설정\" />
@@ -195,6 +302,18 @@
       <Project>{118D1788-46A9-45CF-88E9-6388FCBAA125}</Project>
       <Name>ClassLibrary</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Print.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

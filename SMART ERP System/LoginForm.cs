@@ -1,85 +1,44 @@
-﻿using ClassLibrary;
+﻿using ClassLibrary.FormHelper;
+using MetroFramework.Forms;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SMART_ERP_System
 {
     public partial class LoginForm : Form
     {
+        private MainForm mainForm;
         public LoginForm()
         {
             InitializeComponent();
+            this.SetFormLocation();
+            loginControl.RecieveLoginForm(this);
         }
 
-        public string EmployeeName
+        private void LoginForm_KeyDown(object sender, KeyEventArgs e)
         {
-            get
+            if (e.Alt && e.KeyCode == Keys.C)
             {
-                return txbEmployeeName.Text;
+                loginControl.btnCancel.PerformClick();
             }
         }
 
-        private void TxbEmployeeCode_KeyUp(object sender, KeyEventArgs e)
+        private void LoginForm_VisibleChanged(object sender, EventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            if(this.Visible == false)
             {
-                string name = CheckLoginID(txbEmployeeCode.Text);
-
-                if (name == null)
-                    MessageBox.Show("Test");
-
-                txbEmployeeName.Text = name;
+                mainForm = new MainForm();
+                mainForm.RecieveLoginForm(this);
+                mainForm.SetFormLocation();
+                mainForm.ShowDialog();
             }
-        }
-
-        private string CheckLoginID(string text)
-        {
-            using (ERPEntities entities = new ERPEntities())
-            {
-                string name = entities.사원등록
-                    .Where(x => x.사원코드 == text)
-                    .Select(x => x.사원명).ToList().FirstOrDefault();
-
-                return name;
-            }
-        }
-
-        private void BtnCancel_Click(object sender, EventArgs e)
-        {
-            Dispose();
-        }
-
-        private void BtnOk_Click(object sender, EventArgs e)
-        {
-            if(CheckPassWord(txbPassWord.Text)==true)
-                Close();
-        }
-
-        private bool CheckPassWord(string text)
-        {
-            using (ERPEntities entities = new ERPEntities())
-            {
-                string pwd = entities.사원등록
-                    .Where(x => x.암호 == text)
-                    .Select(x => x.암호)
-                    .ToList().FirstOrDefault();
-
-                if (pwd == null)
-                {
-                    MessageBox.Show("틀린 암호");
-                    return false;
-                }                    
-
-                LoginSuccess();
-                return true;
-            }
-        }
-
-        public void LoginSuccess()
-        {
-            MessageBox.Show($"{txbEmployeeName.Text}님이 로그인");
         }
     }
 }
