@@ -1,31 +1,32 @@
 ﻿using MetroFramework.Forms;
-using SMART_ERP_System.Properties;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using ClassLibrary.FormHelper;
 
 namespace SMART_ERP_System
-{    
+{
     public partial class MainForm : MetroForm
     {
         LoginForm loginForm;
+
         public MainForm()
         {
-            loginForm = new LoginForm();
-            loginForm.ShowDialog();
-
             InitializeComponent();
+        }
+
+        public void RecieveLoginForm(LoginForm loginForm)
+        {
+            this.loginForm = loginForm;
         }
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            Text = "사용자 : "+ $"{loginForm.EmployeeName}";
+            Text = loginForm.loginControl.txbEmployeeName.Text + "님 환영합니다.";
+        }
+
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            loginForm.Dispose();
         }
     }
 }

@@ -59,7 +59,7 @@
             this.splitContainer1.Panel2.Controls.Add(this.dataGridView1);
             this.splitContainer1.Size = new System.Drawing.Size(852, 579);
             this.splitContainer1.SplitterDistance = 284;
-            this.splitContainer1.TabIndex = 0;
+            this.splitContainer1.TabIndex = 3;
             // 
             // dataGridView1
             // 
@@ -69,14 +69,14 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 23;
             this.dataGridView1.Size = new System.Drawing.Size(564, 579);
-            this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.TabIndex = 17;
             // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(139, 122);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(83, 65);
-            this.button1.TabIndex = 0;
+            this.button1.TabIndex = 5;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
             // 
