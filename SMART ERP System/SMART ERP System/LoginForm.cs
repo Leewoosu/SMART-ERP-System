@@ -1,6 +1,4 @@
 ﻿using ClassLibrary;
-using MyLibrary;
-using MyLibrary.EntityData;
 using System;
 using System.Collections.Generic;
 using System.Linq;

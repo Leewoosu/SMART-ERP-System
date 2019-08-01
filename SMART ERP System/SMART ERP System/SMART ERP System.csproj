@@ -60,6 +60,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -83,6 +84,66 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="MenuUserControl\1.회계관리\1.전표장부관리\1-1.전표등록\전표등록.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuUserControl\1.회계관리\1.전표장부관리\1-1.전표등록\전표등록.Designer.cs">
+      <DependentUpon>전표등록.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuUserControl\1.회계관리\1.전표장부관리\1-1.전표등록\전표출력.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuUserControl\1.회계관리\1.전표장부관리\1-1.전표등록\전표출력.Designer.cs">
+      <DependentUpon>전표출력.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuUserControl\1.회계관리\1.전표장부관리\1-2.분개장\분개장.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuUserControl\1.회계관리\1.전표장부관리\1-2.분개장\분개장.Designer.cs">
+      <DependentUpon>분개장.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuUserControl\1.회계관리\2.결산재무제표관리\2-1.결산자료입력\결산자료입력.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuUserControl\1.회계관리\2.결산재무제표관리\2-1.결산자료입력\결산자료입력.Designer.cs">
+      <DependentUpon>결산자료입력.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuUserControl\1.회계관리\2.결산재무제표관리\2-2.합계잔액시산표\합계잔액시산표.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuUserControl\1.회계관리\2.결산재무제표관리\2-2.합계잔액시산표\합계잔액시산표.Designer.cs">
+      <DependentUpon>합계잔액시산표.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuUserControl\1.회계관리\2.결산재무제표관리\2-3.재무상태표\재무상태표.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuUserControl\1.회계관리\2.결산재무제표관리\2-3.재무상태표\재무상태표.Designer.cs">
+      <DependentUpon>재무상태표.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuUserControl\1.회계관리\2.결산재무제표관리\2-4.손익계산서\손익계산서.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuUserControl\1.회계관리\2.결산재무제표관리\2-4.손익계산서\손익계산서.Designer.cs">
+      <DependentUpon>손익계산서.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuUserControl\1.회계관리\2.결산재무제표관리\2-5.원가보고서\원가보고서.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuUserControl\1.회계관리\2.결산재무제표관리\2-5.원가보고서\원가보고서.Designer.cs">
+      <DependentUpon>원가보고서.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuUserControl\1.회계관리\5.고정자산관리\5-1.고정자산등록\고정자산등록.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuUserControl\1.회계관리\5.고정자산관리\5-1.고정자산등록\고정자산등록.Designer.cs">
+      <DependentUpon>고정자산등록.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuUserControl\1.회계관리\5.고정자산관리\5-2.고정자산관리대장\고정자산관리대장.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuUserControl\1.회계관리\5.고정자산관리\5-2.고정자산관리대장\고정자산관리대장.Designer.cs">
+      <DependentUpon>고정자산관리대장.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="MainForm_Control\UserControl1.cs">
@@ -96,6 +157,36 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuUserControl\1.회계관리\1.전표장부관리\1-1.전표등록\전표등록.resx">
+      <DependentUpon>전표등록.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuUserControl\1.회계관리\1.전표장부관리\1-1.전표등록\전표출력.resx">
+      <DependentUpon>전표출력.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuUserControl\1.회계관리\1.전표장부관리\1-2.분개장\분개장.resx">
+      <DependentUpon>분개장.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuUserControl\1.회계관리\2.결산재무제표관리\2-1.결산자료입력\결산자료입력.resx">
+      <DependentUpon>결산자료입력.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuUserControl\1.회계관리\2.결산재무제표관리\2-2.합계잔액시산표\합계잔액시산표.resx">
+      <DependentUpon>합계잔액시산표.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuUserControl\1.회계관리\2.결산재무제표관리\2-3.재무상태표\재무상태표.resx">
+      <DependentUpon>재무상태표.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuUserControl\1.회계관리\2.결산재무제표관리\2-4.손익계산서\손익계산서.resx">
+      <DependentUpon>손익계산서.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuUserControl\1.회계관리\2.결산재무제표관리\2-5.원가보고서\원가보고서.resx">
+      <DependentUpon>원가보고서.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuUserControl\1.회계관리\5.고정자산관리\5-1.고정자산등록\고정자산등록.resx">
+      <DependentUpon>고정자산등록.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuUserControl\1.회계관리\5.고정자산관리\5-2.고정자산관리대장\고정자산관리대장.resx">
+      <DependentUpon>고정자산관리대장.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -126,21 +217,12 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="MenuUserControl\1.회계관리\1.전표장부관리\1-1.전표등록\" />
-    <Folder Include="MenuUserControl\1.회계관리\1.전표장부관리\1-2.분개장\" />
     <Folder Include="MenuUserControl\1.회계관리\1.전표장부관리\1-3.매입매출장\" />
     <Folder Include="MenuUserControl\1.회계관리\1.전표장부관리\1-4.기간비용현황\" />
-    <Folder Include="MenuUserControl\1.회계관리\2.결산재무제표관리\2-1.결산자료입력\" />
-    <Folder Include="MenuUserControl\1.회계관리\2.결산재무제표관리\2-2.합계잔액시산표\" />
-    <Folder Include="MenuUserControl\1.회계관리\2.결산재무제표관리\2-3.재무상태표\" />
-    <Folder Include="MenuUserControl\1.회계관리\2.결산재무제표관리\2-4.손익계산서\" />
-    <Folder Include="MenuUserControl\1.회계관리\2.결산재무제표관리\2-5.원가보고서\" />
     <Folder Include="MenuUserControl\1.회계관리\3.자금관리\3-1.자금계획달력\" />
     <Folder Include="MenuUserControl\1.회계관리\3.자금관리\3-2.자금현황,입출금내역\" />
     <Folder Include="MenuUserControl\1.회계관리\4.예산관리\4-1.예산신청,편성,조정입력\" />
     <Folder Include="MenuUserControl\1.회계관리\4.예산관리\4-2.예산실적현황\" />
-    <Folder Include="MenuUserControl\1.회계관리\5.고정자산관리\5-1.고정자산등록\" />
-    <Folder Include="MenuUserControl\1.회계관리\5.고정자산관리\5-2.고정자산관리대장\" />
     <Folder Include="MenuUserControl\1.회계관리\6.업무용승용차 차량등록\" />
     <Folder Include="MenuUserControl\1.회계관리\7.부가가치세관리\7-1.부가세신고서\" />
     <Folder Include="MenuUserControl\1.회계관리\7.부가가치세관리\7-2.세금계산서합계표\" />
