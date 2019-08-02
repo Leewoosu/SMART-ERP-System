@@ -22,6 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -77,25 +78,416 @@
     <Compile Include="LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="MainForm_Control\LoginControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainForm_Control\LoginControl.Designer.cs">
+      <DependentUpon>LoginControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="MainForm_Control\UserControl1.cs">
+    <Compile Include="MenuUserControl\1.회계관리\1.전표장부관리\1-1.전표등록\전표등록.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="MainForm_Control\UserControl1.Designer.cs">
-      <DependentUpon>UserControl1.cs</DependentUpon>
+    <Compile Include="MenuUserControl\1.회계관리\1.전표장부관리\1-1.전표등록\전표등록.designer.cs">
+      <DependentUpon>전표등록.cs</DependentUpon>
     </Compile>
+    <Compile Include="MenuUserControl\1.회계관리\1.전표장부관리\1-1.전표등록\전표출력.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuUserControl\1.회계관리\1.전표장부관리\1-1.전표등록\전표출력.designer.cs">
+      <DependentUpon>전표출력.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuUserControl\1.회계관리\1.전표장부관리\1-2.분개장\분개장.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuUserControl\1.회계관리\1.전표장부관리\1-2.분개장\분개장.designer.cs">
+      <DependentUpon>분개장.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuUserControl\1.회계관리\2.결산재무제표관리\2-1.결산자료입력\결산자료입력.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuUserControl\1.회계관리\2.결산재무제표관리\2-1.결산자료입력\결산자료입력.designer.cs">
+      <DependentUpon>결산자료입력.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuUserControl\1.회계관리\2.결산재무제표관리\2-2.합계잔액시산표\합계잔액시산표.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuUserControl\1.회계관리\2.결산재무제표관리\2-2.합계잔액시산표\합계잔액시산표.designer.cs">
+      <DependentUpon>합계잔액시산표.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuUserControl\1.회계관리\2.결산재무제표관리\2-3.재무상태표\재무상태표.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuUserControl\1.회계관리\2.결산재무제표관리\2-3.재무상태표\재무상태표.designer.cs">
+      <DependentUpon>재무상태표.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuUserControl\1.회계관리\2.결산재무제표관리\2-4.손익계산서\손익계산서.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuUserControl\1.회계관리\2.결산재무제표관리\2-4.손익계산서\손익계산서.designer.cs">
+      <DependentUpon>손익계산서.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuUserControl\1.회계관리\2.결산재무제표관리\2-5.원가보고서\원가보고서.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuUserControl\1.회계관리\2.결산재무제표관리\2-5.원가보고서\원가보고서.designer.cs">
+      <DependentUpon>원가보고서.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuUserControl\1.회계관리\5.고정자산관리\5-1.고정자산등록\고정자산등록.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuUserControl\1.회계관리\5.고정자산관리\5-1.고정자산등록\고정자산등록.designer.cs">
+      <DependentUpon>고정자산등록.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuUserControl\1.회계관리\5.고정자산관리\5-2.고정자산관리대장\고정자산관리대장.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuUserControl\1.회계관리\5.고정자산관리\5-2.고정자산관리대장\고정자산관리대장.designer.cs">
+      <DependentUpon>고정자산관리대장.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuUserControl\1.회계관리\6.업무용승용차 차량등록\업무용승용차차량등록.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuUserControl\1.회계관리\6.업무용승용차 차량등록\업무용승용차차량등록.designer.cs">
+      <DependentUpon>업무용승용차차량등록.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuUserControl\1.회계관리\8.기초정보관리\8-1.계정과목등록\계정과목등록.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuUserControl\1.회계관리\8.기초정보관리\8-1.계정과목등록\계정과목등록.designer.cs">
+      <DependentUpon>계정과목등록.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuUserControl\2.인사관리\1.기초정보관리\1-1.소득,세액공제 환경설정\소득세액공제환경설정.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuUserControl\2.인사관리\1.기초정보관리\1-1.소득,세액공제 환경설정\소득세액공제환경설정.Designer.cs">
+      <DependentUpon>소득세액공제환경설정.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuUserControl\2.인사관리\1.기초정보관리\1-3.인사,급여환경설정\인사급여환경설정.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuUserControl\2.인사관리\1.기초정보관리\1-3.인사,급여환경설정\인사급여환경설정.Designer.cs">
+      <DependentUpon>인사급여환경설정.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuUserControl\2.인사관리\2.인사관리\2-1.인사정보등록\인사정보등록.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuUserControl\2.인사관리\2.인사관리\2-1.인사정보등록\인사정보등록.Designer.cs">
+      <DependentUpon>인사정보등록.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuUserControl\2.인사관리\3.급여관리\3-1.급여입력\급여입력.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuUserControl\2.인사관리\3.급여관리\3-1.급여입력\급여입력.Designer.cs">
+      <DependentUpon>급여입력.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuUserControl\2.인사관리\3.급여관리\3-2.급여대장\급여대장.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuUserControl\2.인사관리\3.급여관리\3-2.급여대장\급여대장.Designer.cs">
+      <DependentUpon>급여대장.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuUserControl\2.인사관리\4.퇴직정산관리\4-1.퇴직기준설정\퇴직기준설정.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuUserControl\2.인사관리\4.퇴직정산관리\4-1.퇴직기준설정\퇴직기준설정.Designer.cs">
+      <DependentUpon>퇴직기준설정.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuUserControl\2.인사관리\4.퇴직정산관리\4-2.퇴직금산정\퇴직금산정.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuUserControl\2.인사관리\4.퇴직정산관리\4-2.퇴직금산정\퇴직금산정.Designer.cs">
+      <DependentUpon>퇴직금산정.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuUserControl\2.인사관리\4.퇴직정산관리\4-4.퇴직금산정현황\퇴직금산정현황.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuUserControl\2.인사관리\4.퇴직정산관리\4-4.퇴직금산정현황\퇴직금산정현황.Designer.cs">
+      <DependentUpon>퇴직금산정현황.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuUserControl\3.생산관리\1.기초정보관리\1-1.BOM 등록 및 정전개\BOM등록및정전개.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuUserControl\3.생산관리\1.기초정보관리\1-1.BOM 등록 및 정전개\BOM등록및정전개.Designer.cs">
+      <DependentUpon>BOM등록및정전개.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuUserControl\3.생산관리\1.기초정보관리\1-2.불량유형등록\불량유형등록.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuUserControl\3.생산관리\1.기초정보관리\1-2.불량유형등록\불량유형등록.Designer.cs">
+      <DependentUpon>불량유형등록.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuUserControl\3.생산관리\4.생산정보\4-1.생산현황 조회\생산현황조회.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuUserControl\3.생산관리\4.생산정보\4-1.생산현황 조회\생산현황조회.Designer.cs">
+      <DependentUpon>생산현황조회.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuUserControl\3.생산관리\4.생산정보\4-2.생산실적 입력\생산실적입력.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuUserControl\3.생산관리\4.생산정보\4-2.생산실적 입력\생산실적입력.Designer.cs">
+      <DependentUpon>생산실적입력.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuUserControl\3.생산관리\4.생산정보\4-3.일일 , 주간 생산 일보\일일주간생산일보.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuUserControl\3.생산관리\4.생산정보\4-3.일일 , 주간 생산 일보\일일주간생산일보.Designer.cs">
+      <DependentUpon>일일주간생산일보.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuUserControl\3.생산관리\5.재공관리\재공관리.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuUserControl\3.생산관리\5.재공관리\재공관리.Designer.cs">
+      <DependentUpon>재공관리.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuUserControl\3.생산관리\6.외주관리\6-1.외주 입고\외주입고.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuUserControl\3.생산관리\6.외주관리\6-1.외주 입고\외주입고.Designer.cs">
+      <DependentUpon>외주입고.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuUserControl\3.생산관리\6.외주관리\6-2.외주 자재출고\외주자재출고.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuUserControl\3.생산관리\6.외주관리\6-2.외주 자재출고\외주자재출고.Designer.cs">
+      <DependentUpon>외주자재출고.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuUserControl\3.생산관리\6.외주관리\6-3.외주발주현황\외주발주현황.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuUserControl\3.생산관리\6.외주관리\6-3.외주발주현황\외주발주현황.Designer.cs">
+      <DependentUpon>외주발주현황.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuUserControl\4.물류관리\2.구매관리\발주등록.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuUserControl\4.물류관리\2.구매관리\발주등록.Designer.cs">
+      <DependentUpon>발주등록.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuUserControl\4.물류관리\2.구매관리\소요량전개.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuUserControl\4.물류관리\2.구매관리\소요량전개.Designer.cs">
+      <DependentUpon>소요량전개.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuUserControl\4.물류관리\2.구매관리\입고검사등록.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuUserControl\4.물류관리\2.구매관리\입고검사등록.Designer.cs">
+      <DependentUpon>입고검사등록.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuUserControl\4.물류관리\2.구매관리\입고처리.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuUserControl\4.물류관리\2.구매관리\입고처리.Designer.cs">
+      <DependentUpon>입고처리.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuUserControl\4.물류관리\2.구매관리\청구등록.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuUserControl\4.물류관리\2.구매관리\청구등록.Designer.cs">
+      <DependentUpon>청구등록.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuUserControl\4.물류관리\3.구매현황\발주현황.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuUserControl\4.물류관리\3.구매현황\발주현황.Designer.cs">
+      <DependentUpon>발주현황.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuUserControl\4.물류관리\3.구매현황\입고현황.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuUserControl\4.물류관리\3.구매현황\입고현황.Designer.cs">
+      <DependentUpon>입고현황.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuUserControl\4.물류관리\3.구매현황\청구현황.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuUserControl\4.물류관리\3.구매현황\청구현황.Designer.cs">
+      <DependentUpon>청구현황.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuUserControl\4.물류관리\5.재고조정\재고조정현황.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuUserControl\4.물류관리\5.재고조정\재고조정현황.Designer.cs">
+      <DependentUpon>재고조정현황.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuUserControl\4.물류관리\6.출고처리\출고처리.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuUserControl\4.물류관리\6.출고처리\출고처리.Designer.cs">
+      <DependentUpon>출고처리.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuUserControl\4.물류관리\7.매출액\매출마감.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuUserControl\4.물류관리\7.매출액\매출마감.Designer.cs">
+      <DependentUpon>매출마감.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuUserControl\4.물류관리\9.기초정보관리\품목단가등록.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuUserControl\4.물류관리\9.기초정보관리\품목단가등록.Designer.cs">
+      <DependentUpon>품목단가등록.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuUserControl\4.물류관리\9.기초정보관리\자재등록.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuUserControl\4.물류관리\9.기초정보관리\자재등록.Designer.cs">
+      <DependentUpon>자재등록.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrintForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintForm.Designer.cs">
+      <DependentUpon>PrintForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm_Control\LoginControl.resx">
+      <DependentUpon>LoginControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuUserControl\1.회계관리\1.전표장부관리\1-1.전표등록\전표등록.resx">
+      <DependentUpon>전표등록.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuUserControl\1.회계관리\1.전표장부관리\1-1.전표등록\전표출력.resx">
+      <DependentUpon>전표출력.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuUserControl\1.회계관리\1.전표장부관리\1-2.분개장\분개장.resx">
+      <DependentUpon>분개장.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuUserControl\1.회계관리\2.결산재무제표관리\2-1.결산자료입력\결산자료입력.resx">
+      <DependentUpon>결산자료입력.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuUserControl\1.회계관리\2.결산재무제표관리\2-2.합계잔액시산표\합계잔액시산표.resx">
+      <DependentUpon>합계잔액시산표.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuUserControl\1.회계관리\2.결산재무제표관리\2-3.재무상태표\재무상태표.resx">
+      <DependentUpon>재무상태표.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuUserControl\1.회계관리\2.결산재무제표관리\2-4.손익계산서\손익계산서.resx">
+      <DependentUpon>손익계산서.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuUserControl\1.회계관리\2.결산재무제표관리\2-5.원가보고서\원가보고서.resx">
+      <DependentUpon>원가보고서.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuUserControl\1.회계관리\5.고정자산관리\5-1.고정자산등록\고정자산등록.resx">
+      <DependentUpon>고정자산등록.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuUserControl\1.회계관리\5.고정자산관리\5-2.고정자산관리대장\고정자산관리대장.resx">
+      <DependentUpon>고정자산관리대장.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuUserControl\1.회계관리\6.업무용승용차 차량등록\업무용승용차차량등록.resx">
+      <DependentUpon>업무용승용차차량등록.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuUserControl\1.회계관리\8.기초정보관리\8-1.계정과목등록\계정과목등록.resx">
+      <DependentUpon>계정과목등록.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuUserControl\2.인사관리\1.기초정보관리\1-1.소득,세액공제 환경설정\소득세액공제환경설정.resx">
+      <DependentUpon>소득세액공제환경설정.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuUserControl\2.인사관리\1.기초정보관리\1-3.인사,급여환경설정\인사급여환경설정.resx">
+      <DependentUpon>인사급여환경설정.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuUserControl\2.인사관리\2.인사관리\2-1.인사정보등록\인사정보등록.resx">
+      <DependentUpon>인사정보등록.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuUserControl\2.인사관리\3.급여관리\3-1.급여입력\급여입력.resx">
+      <DependentUpon>급여입력.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuUserControl\2.인사관리\3.급여관리\3-2.급여대장\급여대장.resx">
+      <DependentUpon>급여대장.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuUserControl\2.인사관리\4.퇴직정산관리\4-1.퇴직기준설정\퇴직기준설정.resx">
+      <DependentUpon>퇴직기준설정.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuUserControl\2.인사관리\4.퇴직정산관리\4-2.퇴직금산정\퇴직금산정.resx">
+      <DependentUpon>퇴직금산정.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuUserControl\2.인사관리\4.퇴직정산관리\4-4.퇴직금산정현황\퇴직금산정현황.resx">
+      <DependentUpon>퇴직금산정현황.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuUserControl\3.생산관리\1.기초정보관리\1-1.BOM 등록 및 정전개\BOM등록및정전개.resx">
+      <DependentUpon>BOM등록및정전개.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuUserControl\3.생산관리\1.기초정보관리\1-2.불량유형등록\불량유형등록.resx">
+      <DependentUpon>불량유형등록.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuUserControl\3.생산관리\4.생산정보\4-1.생산현황 조회\생산현황조회.resx">
+      <DependentUpon>생산현황조회.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuUserControl\3.생산관리\4.생산정보\4-2.생산실적 입력\생산실적입력.resx">
+      <DependentUpon>생산실적입력.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuUserControl\3.생산관리\4.생산정보\4-3.일일 , 주간 생산 일보\일일주간생산일보.resx">
+      <DependentUpon>일일주간생산일보.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuUserControl\3.생산관리\5.재공관리\재공관리.resx">
+      <DependentUpon>재공관리.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuUserControl\3.생산관리\6.외주관리\6-1.외주 입고\외주입고.resx">
+      <DependentUpon>외주입고.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuUserControl\3.생산관리\6.외주관리\6-2.외주 자재출고\외주자재출고.resx">
+      <DependentUpon>외주자재출고.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuUserControl\3.생산관리\6.외주관리\6-3.외주발주현황\외주발주현황.resx">
+      <DependentUpon>외주발주현황.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuUserControl\4.물류관리\2.구매관리\발주등록.resx">
+      <DependentUpon>발주등록.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuUserControl\4.물류관리\2.구매관리\소요량전개.resx">
+      <DependentUpon>소요량전개.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuUserControl\4.물류관리\2.구매관리\입고검사등록.resx">
+      <DependentUpon>입고검사등록.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuUserControl\4.물류관리\2.구매관리\입고처리.resx">
+      <DependentUpon>입고처리.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuUserControl\4.물류관리\2.구매관리\청구등록.resx">
+      <DependentUpon>청구등록.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuUserControl\4.물류관리\3.구매현황\발주현황.resx">
+      <DependentUpon>발주현황.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuUserControl\4.물류관리\3.구매현황\입고현황.resx">
+      <DependentUpon>입고현황.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuUserControl\4.물류관리\3.구매현황\청구현황.resx">
+      <DependentUpon>청구현황.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuUserControl\4.물류관리\5.재고조정\재고조정현황.resx">
+      <DependentUpon>재고조정현황.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuUserControl\4.물류관리\6.출고처리\출고처리.resx">
+      <DependentUpon>출고처리.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuUserControl\4.물류관리\7.매출액\매출마감.resx">
+      <DependentUpon>매출마감.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuUserControl\4.물류관리\9.기초정보관리\품목단가등록.resx">
+      <DependentUpon>품목단가등록.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuUserControl\4.물류관리\9.기초정보관리\자재등록.resx">
+      <DependentUpon>자재등록.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintForm.resx">
+      <DependentUpon>PrintForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -108,9 +500,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="MainForm_Control\UserControl1.resx">
-      <DependentUpon>UserControl1.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -126,60 +515,26 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="MenuUserControl\1.회계관리\1.전표장부관리\1-1.전표등록\" />
-    <Folder Include="MenuUserControl\1.회계관리\1.전표장부관리\1-2.분개장\" />
     <Folder Include="MenuUserControl\1.회계관리\1.전표장부관리\1-3.매입매출장\" />
     <Folder Include="MenuUserControl\1.회계관리\1.전표장부관리\1-4.기간비용현황\" />
-    <Folder Include="MenuUserControl\1.회계관리\2.결산재무제표관리\2-1.결산자료입력\" />
-    <Folder Include="MenuUserControl\1.회계관리\2.결산재무제표관리\2-2.합계잔액시산표\" />
-    <Folder Include="MenuUserControl\1.회계관리\2.결산재무제표관리\2-3.재무상태표\" />
-    <Folder Include="MenuUserControl\1.회계관리\2.결산재무제표관리\2-4.손익계산서\" />
-    <Folder Include="MenuUserControl\1.회계관리\2.결산재무제표관리\2-5.원가보고서\" />
     <Folder Include="MenuUserControl\1.회계관리\3.자금관리\3-1.자금계획달력\" />
     <Folder Include="MenuUserControl\1.회계관리\3.자금관리\3-2.자금현황,입출금내역\" />
     <Folder Include="MenuUserControl\1.회계관리\4.예산관리\4-1.예산신청,편성,조정입력\" />
     <Folder Include="MenuUserControl\1.회계관리\4.예산관리\4-2.예산실적현황\" />
-    <Folder Include="MenuUserControl\1.회계관리\5.고정자산관리\5-1.고정자산등록\" />
-    <Folder Include="MenuUserControl\1.회계관리\5.고정자산관리\5-2.고정자산관리대장\" />
-    <Folder Include="MenuUserControl\1.회계관리\6.업무용승용차 차량등록\" />
     <Folder Include="MenuUserControl\1.회계관리\7.부가가치세관리\7-1.부가세신고서\" />
     <Folder Include="MenuUserControl\1.회계관리\7.부가가치세관리\7-2.세금계산서합계표\" />
-    <Folder Include="MenuUserControl\1.회계관리\8.기초정보관리\8-1.계정과목등록\" />
-    <Folder Include="MenuUserControl\2.인사관리\1.기초정보관리\1-1.소득,세액공제 환경설정\" />
     <Folder Include="MenuUserControl\2.인사관리\1.기초정보관리\1-2.급,상여 지급일자 등록\" />
-    <Folder Include="MenuUserControl\2.인사관리\1.기초정보관리\1-3.인사,급여환경설정\" />
-    <Folder Include="MenuUserControl\2.인사관리\2.인사관리\2-1.인사정보등록\" />
     <Folder Include="MenuUserControl\2.인사관리\2.인사관리\2-2.사원 입,퇴사현황\" />
-    <Folder Include="MenuUserControl\2.인사관리\3.급여관리\3-1.급여입력\" />
-    <Folder Include="MenuUserControl\2.인사관리\3.급여관리\3-2.급여대장\" />
     <Folder Include="MenuUserControl\2.인사관리\3.급여관리\3-3.사원별 급,상여 변동현황\" />
-    <Folder Include="MenuUserControl\2.인사관리\4.퇴직정산관리\4-1.퇴직기준설정\" />
-    <Folder Include="MenuUserControl\2.인사관리\4.퇴직정산관리\4-2.퇴직금산정\" />
     <Folder Include="MenuUserControl\2.인사관리\4.퇴직정산관리\4-3.퇴직금추계액\" />
-    <Folder Include="MenuUserControl\2.인사관리\4.퇴직정산관리\4-4.퇴직금산정현황\" />
     <Folder Include="MenuUserControl\2.인사관리\5.세무관리\5-1.지방소득세 특별징수명세,납부서\" />
     <Folder Include="MenuUserControl\2.인사관리\5.세무관리\5-2.원천징수 이행상황신고서\" />
-    <Folder Include="MenuUserControl\3.생산관리\1.기초정보관리\1-1.기준정보\" />
-    <Folder Include="MenuUserControl\3.생산관리\1.기초정보관리\1-2.BOM 및 Part Number에 의한 구매소요량 계산 및 조정\" />
     <Folder Include="MenuUserControl\3.생산관리\2.공정정보\" />
     <Folder Include="MenuUserControl\3.생산관리\3.설비정보\" />
-    <Folder Include="MenuUserControl\3.생산관리\4.생산정보\4-1.생산현황 조회\" />
-    <Folder Include="MenuUserControl\3.생산관리\4.생산정보\4-2.생산실적 입력\" />
-    <Folder Include="MenuUserControl\3.생산관리\4.생산정보\4-3.일일 , 주간 생산 일보\" />
-    <Folder Include="MenuUserControl\3.생산관리\5.재공관리\" />
-    <Folder Include="MenuUserControl\3.생산관리\6.외주관리\6-1.외주 입고\" />
-    <Folder Include="MenuUserControl\3.생산관리\6.외주관리\6-2.외주 자재출고\" />
-    <Folder Include="MenuUserControl\3.생산관리\6.외주관리\6-3.외주발주현황\" />
     <Folder Include="MenuUserControl\3.생산관리\6.외주관리\6-4.외주재고관리\" />
     <Folder Include="MenuUserControl\4.물류관리\1.수주등록\" />
-    <Folder Include="MenuUserControl\4.물류관리\2.구매관리\" />
-    <Folder Include="MenuUserControl\4.물류관리\3.구매현황\" />
     <Folder Include="MenuUserControl\4.물류관리\4.재고관리\" />
-    <Folder Include="MenuUserControl\4.물류관리\5.재고조정\" />
-    <Folder Include="MenuUserControl\4.물류관리\6.기초정보관리\" />
-    <Folder Include="MenuUserControl\4.물류관리\7.매출액\" />
     <Folder Include="MenuUserControl\4.물류관리\8.예상매출액\" />
-    <Folder Include="MenuUserControl\4.물류관리\9.출고처리\" />
     <Folder Include="MenuUserControl\5.시스템관리\1.시스템 환경설정 및 사용 권한 설정\" />
     <Folder Include="MenuUserControl\5.시스템관리\2.회사정보 등록\" />
     <Folder Include="MenuUserControl\5.시스템관리\3.거래처, 프로젝트, 품목, 물류 등록\" />
@@ -195,6 +550,18 @@
       <Project>{118D1788-46A9-45CF-88E9-6388FCBAA125}</Project>
       <Name>ClassLibrary</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Print.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

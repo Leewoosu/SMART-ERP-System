@@ -275,6 +275,15 @@
     <NavigationProperty Name="수주" Relationship="Self.FK_수주_납품업체" FromRole="납품업체" ToRole="수주" />
     <NavigationProperty Name="수주확인서" Relationship="Self.FK_수주확인서_납품업체" FromRole="납품업체" ToRole="수주확인서" />
   </EntityType>
+  <EntityType Name="메뉴등록">
+    <Key>
+      <PropertyRef Name="CodeNum" />
+    </Key>
+    <Property Name="CodeNum" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PrentKey" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="ControlName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+  </EntityType>
   <EntityType Name="메뉴별권한설정">
     <Key>
       <PropertyRef Name="메뉴별권한설정코드" />
@@ -530,8 +539,8 @@
     <Property Name="제품번호" Type="Int32" Nullable="false" />
     <Property Name="주문수량" Type="Int32" Nullable="false" />
     <Property Name="납품업체번호" Type="Int32" Nullable="false" />
-    <Property Name="주문일" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="납기일" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="주문일" Type="Int32" />
+    <Property Name="납기일" Type="Int32" />
     <NavigationProperty Name="납품업체" Relationship="Self.FK_수주_납품업체" FromRole="수주" ToRole="납품업체" />
     <NavigationProperty Name="제품" Relationship="Self.FK_수주_제품" FromRole="수주" ToRole="제품" />
   </EntityType>
@@ -766,10 +775,21 @@
     </Key>
     <Property Name="제품번호" Type="Int32" Nullable="false" />
     <Property Name="제품명" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="안전재고량" Type="Int32" Nullable="false" />
-    <Property Name="자재명세번호" Type="Int32" Nullable="false" />
-    <Property Name="재고량" Type="Int32" Nullable="false" />
-    <Property Name="제품단가" Type="Int32" Nullable="false" />
+    <Property Name="안전재고량" Type="Int32" />
+    <Property Name="자재명세번호" Type="Int32" />
+    <Property Name="재고량" Type="Int32" />
+    <Property Name="품목군" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="검사여부" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="일별생산량" Type="Int32" />
+    <Property Name="표준원가" Type="Int32" />
+    <Property Name="실제원가" Type="Int32" />
+    <Property Name="최종공정" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="전공정" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="후공정" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="외경" Type="Int32" />
+    <Property Name="층" Type="Int32" />
+    <Property Name="리드타임" Type="Int32" />
+    <Property Name="LOT수량" Type="Int32" />
     <NavigationProperty Name="수주" Relationship="Self.FK_수주_제품" FromRole="제품" ToRole="수주" />
     <NavigationProperty Name="수주확인리스트" Relationship="Self.FK_수주확인리스트_제품" FromRole="제품" ToRole="수주확인리스트" />
     <NavigationProperty Name="자재명세서" Relationship="Self.FK_자재명세서_제품" FromRole="제품" ToRole="자재명세서" />
@@ -820,11 +840,31 @@
     <Property Name="퇴직소득유형" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="항목명" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
   </EntityType>
+  <EntityType Name="투입현황">
+    <Key>
+      <PropertyRef Name="관리번호" />
+    </Key>
+    <Property Name="관리번호" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="품목번호" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="자재불출" Type="Boolean" Nullable="false" />
+    <Property Name="투입일" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="투입수량" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="투입현황1">
+    <Key>
+      <PropertyRef Name="관리번호" />
+    </Key>
+    <Property Name="관리번호" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="품목번호" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="자재불출" Type="Boolean" Nullable="false" />
+    <Property Name="투입수량" Type="Int32" Nullable="false" />
+    <Property Name="투입일" Type="DateTime" Nullable="false" Precision="0" />
+  </EntityType>
   <EntityType Name="품목정보">
     <Key>
-      <PropertyRef Name="품목정보1" />
+      <PropertyRef Name="품목번호" />
     </Key>
-    <Property Name="품목정보1" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="품목번호" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="전공정" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
     <Property Name="후공정" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
     <Property Name="외경" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
@@ -1527,6 +1567,7 @@
     <EntitySet Name="기간비용계산방법" EntityType="Self.기간비용계산방법" />
     <EntitySet Name="기준설정" EntityType="Self.기준설정" />
     <EntitySet Name="납품업체" EntityType="Self.납품업체" />
+    <EntitySet Name="메뉴등록" EntityType="Self.메뉴등록" />
     <EntitySet Name="메뉴별권한설정" EntityType="Self.메뉴별권한설정" />
     <EntitySet Name="발주리스트" EntityType="Self.발주리스트" />
     <EntitySet Name="발주서" EntityType="Self.발주서" />
@@ -1571,6 +1612,8 @@
     <EntitySet Name="퇴직공제항목" EntityType="Self.퇴직공제항목" />
     <EntitySet Name="퇴직기준설명" EntityType="Self.퇴직기준설명" />
     <EntitySet Name="퇴직지급항목" EntityType="Self.퇴직지급항목" />
+    <EntitySet Name="투입현황" EntityType="Self.투입현황" />
+    <EntitySet Name="투입현황1" EntityType="Self.투입현황1" />
     <EntitySet Name="품목정보" EntityType="Self.품목정보" />
     <EntitySet Name="환경요소" EntityType="Self.환경요소" />
     <EntitySet Name="회사기본등록사항" EntityType="Self.회사기본등록사항" />

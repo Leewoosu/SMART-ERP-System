@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="d83c7bc9672b4179ba51a4dfc0c35095" Name="Diagram1">
+      <Diagram DiagramId="bb52a6aab75b40dcad6adc68595234ad" Name="Diagram1">
         <EntityTypeShape EntityType="ERPModel.거래처" Width="1.5" PointX="8.75" PointY="4.75" IsExpanded="true" />
         <EntityTypeShape EntityType="ERPModel.거래처구분" Width="1.5" PointX="11" PointY="5.125" IsExpanded="true" />
         <EntityTypeShape EntityType="ERPModel.경비구분" Width="1.5" PointX="5.75" PointY="24" IsExpanded="true" />
@@ -26,7 +26,8 @@
         <EntityTypeShape EntityType="ERPModel.기간비용" Width="1.5" PointX="29" PointY="15" IsExpanded="true" />
         <EntityTypeShape EntityType="ERPModel.기간비용계산방법" Width="1.5" PointX="26.75" PointY="16.25" IsExpanded="true" />
         <EntityTypeShape EntityType="ERPModel.기준설정" Width="1.5" PointX="22" PointY="17" IsExpanded="true" />
-        <EntityTypeShape EntityType="ERPModel.납품업체" Width="1.5" PointX="0.75" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ERPModel.납품업체" Width="1.5" PointX="0.75" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ERPModel.메뉴등록" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="ERPModel.메뉴별권한설정" Width="1.5" PointX="21.5" PointY="22.375" IsExpanded="true" />
         <EntityTypeShape EntityType="ERPModel.발주리스트" Width="1.5" PointX="26.25" PointY="4.375" IsExpanded="true" />
         <EntityTypeShape EntityType="ERPModel.발주서" Width="1.5" PointX="24" PointY="1.25" IsExpanded="true" />
@@ -49,8 +50,8 @@
         <EntityTypeShape EntityType="ERPModel.수주" Width="1.5" PointX="3" PointY="10.75" IsExpanded="true" />
         <EntityTypeShape EntityType="ERPModel.수주확인리스트" Width="1.5" PointX="6" PointY="11" IsExpanded="true" />
         <EntityTypeShape EntityType="ERPModel.수주확인서" Width="1.5" PointX="3.75" PointY="3.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="ERPModel.시스템환경설정" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ERPModel.업무용승용차_차량등록" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ERPModel.시스템환경설정" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ERPModel.업무용승용차_차량등록" Width="1.5" PointX="8.75" PointY="12.75" IsExpanded="true" />
         <EntityTypeShape EntityType="ERPModel.역추적" Width="1.5" PointX="22" PointY="25.875" IsExpanded="true" />
         <EntityTypeShape EntityType="ERPModel.예산" Width="1.5" PointX="10.75" PointY="25.75" IsExpanded="true" />
         <EntityTypeShape EntityType="ERPModel.인사_급여환경설정" Width="1.5" PointX="19.75" PointY="17" IsExpanded="true" />
@@ -61,17 +62,19 @@
         <EntityTypeShape EntityType="ERPModel.작업완료지시" Width="1.5" PointX="3" PointY="15.625" IsExpanded="true" />
         <EntityTypeShape EntityType="ERPModel.작업완료확인서" Width="1.5" PointX="3" PointY="18.5" IsExpanded="true" />
         <EntityTypeShape EntityType="ERPModel.작업지시" Width="1.5" PointX="3" PointY="21.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="ERPModel.작업지시리스트" Width="1.5" PointX="5.25" PointY="16.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ERPModel.작업지시리스트" Width="1.5" PointX="5.25" PointY="15.625" IsExpanded="true" />
         <EntityTypeShape EntityType="ERPModel.작업지시서" Width="1.5" PointX="3" PointY="24.75" IsExpanded="true" />
         <EntityTypeShape EntityType="ERPModel.전표" Width="1.5" PointX="11.75" PointY="12.5" IsExpanded="true" />
         <EntityTypeShape EntityType="ERPModel.전표리스트" Width="1.5" PointX="14" PointY="4.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="ERPModel.제품" Width="1.5" PointX="0.75" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ERPModel.제품" Width="1.5" PointX="0.75" PointY="9.125" IsExpanded="true" />
         <EntityTypeShape EntityType="ERPModel.코드" Width="1.5" PointX="21" PointY="7.875" IsExpanded="true" />
         <EntityTypeShape EntityType="ERPModel.코드분류" Width="1.5" PointX="18.75" PointY="8" IsExpanded="true" />
         <EntityTypeShape EntityType="ERPModel.퇴직공제항목" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ERPModel.퇴직기준설명" Width="1.5" PointX="8.75" PointY="12.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ERPModel.퇴직지급항목" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ERPModel.품목정보" Width="1.5" PointX="13.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ERPModel.퇴직기준설명" Width="1.5" PointX="5.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ERPModel.퇴직지급항목" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ERPModel.투입현황" Width="1.5" PointX="13.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ERPModel.투입현황1" Width="1.5" PointX="13.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ERPModel.품목정보" Width="1.5" PointX="18.75" PointY="4.75" IsExpanded="true" />
         <EntityTypeShape EntityType="ERPModel.환경요소" Width="1.5" PointX="24.25" PointY="16.875" IsExpanded="true" />
         <EntityTypeShape EntityType="ERPModel.회사기본등록사항" Width="1.5" PointX="26" PointY="21" IsExpanded="true" />
         <EntityTypeShape EntityType="ERPModel.회사등록" Width="1.5" PointX="23.75" PointY="22.25" IsExpanded="true" />

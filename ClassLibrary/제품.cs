@@ -29,10 +29,21 @@ namespace ClassLibrary
     
         public int 제품번호 { get; set; }
         public string 제품명 { get; set; }
-        public int 안전재고량 { get; set; }
-        public int 자재명세번호 { get; set; }
-        public int 재고량 { get; set; }
-        public int 제품단가 { get; set; }
+        public Nullable<int> 안전재고량 { get; set; }
+        public Nullable<int> 자재명세번호 { get; set; }
+        public Nullable<int> 재고량 { get; set; }
+        public string 품목군 { get; set; }
+        public string 검사여부 { get; set; }
+        public Nullable<int> 일별생산량 { get; set; }
+        public Nullable<int> 표준원가 { get; set; }
+        public Nullable<int> 실제원가 { get; set; }
+        public string 최종공정 { get; set; }
+        public string 전공정 { get; set; }
+        public string 후공정 { get; set; }
+        public Nullable<int> 외경 { get; set; }
+        public Nullable<int> 층 { get; set; }
+        public Nullable<int> 리드타임 { get; set; }
+        public Nullable<int> LOT수량 { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<수주> 수주 { get; set; }

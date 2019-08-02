@@ -14,7 +14,7 @@ namespace ClassLibrary
     
     public partial class 품목정보
     {
-        public string 품목정보1 { get; set; }
+        public string 품목번호 { get; set; }
         public string 전공정 { get; set; }
         public string 후공정 { get; set; }
         public string 외경 { get; set; }

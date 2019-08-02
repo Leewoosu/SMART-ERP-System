@@ -47,6 +47,7 @@ namespace ClassLibrary
         public virtual DbSet<기간비용계산방법> 기간비용계산방법 { get; set; }
         public virtual DbSet<기준설정> 기준설정 { get; set; }
         public virtual DbSet<납품업체> 납품업체 { get; set; }
+        public virtual DbSet<메뉴등록> 메뉴등록 { get; set; }
         public virtual DbSet<메뉴별권한설정> 메뉴별권한설정 { get; set; }
         public virtual DbSet<발주리스트> 발주리스트 { get; set; }
         public virtual DbSet<발주서> 발주서 { get; set; }
@@ -91,6 +92,8 @@ namespace ClassLibrary
         public virtual DbSet<퇴직공제항목> 퇴직공제항목 { get; set; }
         public virtual DbSet<퇴직기준설명> 퇴직기준설명 { get; set; }
         public virtual DbSet<퇴직지급항목> 퇴직지급항목 { get; set; }
+        public virtual DbSet<투입현황> 투입현황 { get; set; }
+        public virtual DbSet<투입현황1> 투입현황1 { get; set; }
         public virtual DbSet<품목정보> 품목정보 { get; set; }
         public virtual DbSet<환경요소> 환경요소 { get; set; }
         public virtual DbSet<회사기본등록사항> 회사기본등록사항 { get; set; }
