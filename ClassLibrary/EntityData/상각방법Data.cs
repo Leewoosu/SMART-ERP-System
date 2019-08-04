@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClassLibrary.EntityData
 {
-    public class EmployeeRegistData : EntityData<사원등록>
+    public class 상각방법Data : EntityData<상각방법>
     {
     }
 }

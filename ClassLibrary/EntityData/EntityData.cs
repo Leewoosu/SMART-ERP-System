@@ -11,12 +11,9 @@ namespace ClassLibrary.EntityData
 {
     public class EntityData<T> where T : class
     {
-        public string NameOrConnectionString => NameOrConnectionString;
-        public DbCompiledModel Model => Model;
-
         public List<T> GetAll()
         {
-            using (DbContext entities = DbContextFactory.Create(NameOrConnectionString, Model))
+            using (ERPEntities entities = new ERPEntities())
             {
                 return entities.Set<T>().ToList();
             }
@@ -24,7 +21,7 @@ namespace ClassLibrary.EntityData
 
         public int GetCount()
         {
-            using (DbContext entities = DbContextFactory.Create(NameOrConnectionString, Model))
+            using (ERPEntities entities = new ERPEntities())
             {
                 return entities.Set<T>().Count();
             }
@@ -32,7 +29,7 @@ namespace ClassLibrary.EntityData
 
         public List<S> Select<S>(Expression<Func<T, S>> selector)
         {
-            using (DbContext entities = DbContextFactory.Create(NameOrConnectionString, Model))
+            using (ERPEntities entities = new ERPEntities())
             {
                 return entities.Set<T>().Select(selector).ToList();
             }
@@ -40,7 +37,7 @@ namespace ClassLibrary.EntityData
 
         public void Insert(T entity)
         {
-            using (DbContext entities = DbContextFactory.Create(NameOrConnectionString, Model))
+            using (ERPEntities entities = new ERPEntities())
             {
                 entities.Set<T>().Add(entity);
                 entities.SaveChanges();
@@ -49,7 +46,7 @@ namespace ClassLibrary.EntityData
 
         public void Update(T entity)
         {
-            using (DbContext entities = DbContextFactory.Create(NameOrConnectionString, Model))
+            using (ERPEntities entities = new ERPEntities())
             {
                 entities.Entry(entity).State = EntityState.Modified;
                 entities.SaveChanges();
@@ -57,7 +54,7 @@ namespace ClassLibrary.EntityData
         }
         public void Delete(T entity)
         {
-            using (DbContext entities = DbContextFactory.Create(NameOrConnectionString, Model))
+            using (ERPEntities entities = new ERPEntities())
             {
                 entities.Entry(entity).State = EntityState.Deleted;
                 entities.SaveChanges();

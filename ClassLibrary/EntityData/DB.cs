@@ -10,9 +10,11 @@ namespace ClassLibrary.EntityData
     {
         static DB()
         {
-            EmployeeRegist = new EmployeeRegistData();
+            사원등록 = new 사원등록Data();
+            상각방법 = new 상각방법Data();
         }
 
-        public static EmployeeRegistData EmployeeRegist { get; }
+        public static 사원등록Data 사원등록 { get; }
+        public static 상각방법Data 상각방법 { get; }
     }
 }
