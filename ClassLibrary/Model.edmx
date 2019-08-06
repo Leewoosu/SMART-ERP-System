@@ -38,7 +38,7 @@
           <Property Name="계정과목명" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="출력계정명" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="계정구분" Type="nvarchar" MaxLength="15" Nullable="false" />
-          <Property Name="차대구분" Type="bit" Nullable="false" />
+          <Property Name="차대구분" Type="bit" />
           <Property Name="입력구분" Type="nvarchar" MaxLength="10" Nullable="false" />
           <Property Name="필수입력여부" Type="nvarchar" MaxLength="15" Nullable="false" />
           <Property Name="그룹코드번호" Type="int" Nullable="false" />
@@ -49,6 +49,14 @@
           </Key>
           <Property Name="그룹코드번호" Type="int" Nullable="false" />
           <Property Name="그룹명" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="계정과목등록">
+          <Key>
+            <PropertyRef Name="CodeNum" />
+          </Key>
+          <Property Name="CodeNum" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="PrentKey" Type="nvarchar" MaxLength="20" />
         </EntityType>
         <EntityType Name="고정자산">
           <Key>
@@ -72,6 +80,14 @@
           </Key>
           <Property Name="공급업체번호" Type="int" Nullable="false" />
           <Property Name="공급업체명" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="공정">
+          <Key>
+            <PropertyRef Name="공정번호" />
+          </Key>
+          <Property Name="공정번호" Type="int" Nullable="false" />
+          <Property Name="공정명" Type="int" Nullable="false" />
+          <Property Name="공정시간" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="공제별세부사항">
           <Key>
@@ -246,6 +262,7 @@
           </Key>
           <Property Name="납품업체번호" Type="int" Nullable="false" />
           <Property Name="납품업체명" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="수주확정일" Type="int" />
         </EntityType>
         <EntityType Name="메뉴등록">
           <Key>
@@ -266,6 +283,14 @@
           <Property Name="삭제" Type="bit" Nullable="false" />
           <Property Name="출력" Type="bit" Nullable="false" />
           <Property Name="메뉴명" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="반품처리서">
+          <Key>
+            <PropertyRef Name="반품처리서번호" />
+          </Key>
+          <Property Name="반품처리서번호" Type="int" Nullable="false" />
+          <Property Name="공급업체번호" Type="int" Nullable="false" />
+          <Property Name="입고검사서번호" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="발주리스트">
           <Key>
@@ -293,8 +318,6 @@
           <Property Name="발주확인서번호" Type="int" Nullable="false" />
           <Property Name="자재번호" Type="int" Nullable="false" />
           <Property Name="수량" Type="int" Nullable="false" />
-          <Property Name="납기여부" Type="int" Nullable="false" />
-          <Property Name="수입검사여부" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="발주확인서">
           <Key>
@@ -343,6 +366,22 @@
           <Property Name="12월 금액" Type="int" Nullable="false" />
           <Property Name="예산코드" Type="int" Nullable="false" />
           <Property Name="신청연도" Type="date" Nullable="false" />
+        </EntityType>
+        <EntityType Name="불량상세정보">
+          <Key>
+            <PropertyRef Name="불량코드번호" />
+            <PropertyRef Name="입고검사서번호" />
+          </Key>
+          <Property Name="불량코드번호" Type="int" Nullable="false" />
+          <Property Name="입고검사서번호" Type="int" Nullable="false" />
+          <Property Name="불량수량" Type="int" />
+        </EntityType>
+        <EntityType Name="불량코드내역">
+          <Key>
+            <PropertyRef Name="불량코드번호" />
+          </Key>
+          <Property Name="불량코드번호" Type="int" Nullable="false" />
+          <Property Name="불량명" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <EntityType Name="사업장관할세무서">
           <Key>
@@ -457,6 +496,17 @@
           <Property Name="상각방법코드번호" Type="int" Nullable="false" />
           <Property Name="상각방법명" Type="nvarchar" MaxLength="20" Nullable="false" />
         </EntityType>
+        <EntityType Name="생산계획현황">
+          <Key>
+            <PropertyRef Name="생산계획현황번호" />
+            <PropertyRef Name="제품번호" />
+          </Key>
+          <Property Name="생산계획현황번호" Type="int" Nullable="false" />
+          <Property Name="작업예정일" Type="nchar" MaxLength="10" />
+          <Property Name="작업확정일" Type="nchar" MaxLength="10" />
+          <Property Name="수량" Type="nchar" MaxLength="10" />
+          <Property Name="제품번호" Type="int" Nullable="false" />
+        </EntityType>
         <EntityType Name="세무유형">
           <Key>
             <PropertyRef Name="세무유형ID" />
@@ -564,6 +614,16 @@
           <Property Name="귀속연월" Type="nvarchar" MaxLength="20" Nullable="false" />
           <Property Name="시작일" Type="int" Nullable="false" />
         </EntityType>
+        <EntityType Name="입고검사서">
+          <Key>
+            <PropertyRef Name="입고검사서번호" />
+          </Key>
+          <Property Name="입고검사서번호" Type="int" Nullable="false" />
+          <Property Name="발주확인서번호" Type="int" Nullable="false" />
+          <Property Name="자재번호" Type="int" Nullable="false" />
+          <Property Name="양품수량" Type="int" Nullable="false" />
+          <Property Name="불량수량" Type="int" Nullable="false" />
+        </EntityType>
         <EntityType Name="자금계획달력">
           <Key>
             <PropertyRef Name="일자" />
@@ -642,7 +702,7 @@
           <Property Name="제품번호" Type="int" Nullable="false" />
           <Property Name="수량" Type="int" Nullable="false" />
         </EntityType>
-        <EntityType Name="작업지시서">
+        <EntityType Name="작업지시서11111">
           <Key>
             <PropertyRef Name="작업지시번호" />
           </Key>
@@ -651,6 +711,21 @@
           <Property Name="수량" Type="int" Nullable="false" />
           <Property Name="작업지시일" Type="datetime" Nullable="false" />
           <Property Name="작업완료일" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="작업지시현황">
+          <Key>
+            <PropertyRef Name="작업지시번호" />
+          </Key>
+          <Property Name="작업지시번호" Type="int" Nullable="false" />
+          <Property Name="생산계획현황번호" Type="int" Nullable="false" />
+          <Property Name="제품번호" Type="int" Nullable="false" />
+          <Property Name="수량" Type="nchar" MaxLength="10" />
+          <Property Name="작업장번호" Type="nchar" MaxLength="10" />
+          <Property Name="작업상태번호" Type="nchar" MaxLength="10" />
+          <Property Name="작업지시일" Type="nchar" MaxLength="10" />
+          <Property Name="작업완료(예정)일" Type="nchar" MaxLength="10" />
+          <Property Name="자재명세번호" Type="int" Nullable="false" />
+          <Property Name="공정번호" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="전표">
           <Key>
@@ -690,16 +765,12 @@
           <Property Name="제품번호" Type="int" Nullable="false" />
           <Property Name="제품명" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="안전재고량" Type="int" />
-          <Property Name="자재명세번호" Type="int" />
           <Property Name="재고량" Type="int" />
-          <Property Name="품목군" Type="nvarchar" MaxLength="50" />
+          <Property Name="품목군" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="검사여부" Type="nvarchar" MaxLength="50" />
           <Property Name="일별생산량" Type="int" />
           <Property Name="표준원가" Type="int" />
           <Property Name="실제원가" Type="int" />
-          <Property Name="최종공정" Type="nvarchar" MaxLength="50" />
-          <Property Name="전공정" Type="nvarchar" MaxLength="50" />
-          <Property Name="후공정" Type="nvarchar" MaxLength="50" />
           <Property Name="외경" Type="int" />
           <Property Name="층" Type="int" />
           <Property Name="리드타임" Type="int" />
@@ -1010,6 +1081,30 @@ warning 6013: The table/view 'ERP.dbo.현장실적현황' does not have a primar
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_반품처리서_공급업체">
+          <End Role="공급업체" Type="Self.공급업체" Multiplicity="1" />
+          <End Role="반품처리서" Type="Self.반품처리서" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="공급업체">
+              <PropertyRef Name="공급업체번호" />
+            </Principal>
+            <Dependent Role="반품처리서">
+              <PropertyRef Name="공급업체번호" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_반품처리서_입고검사서">
+          <End Role="입고검사서" Type="Self.입고검사서" Multiplicity="1" />
+          <End Role="반품처리서" Type="Self.반품처리서" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="입고검사서">
+              <PropertyRef Name="입고검사서번호" />
+            </Principal>
+            <Dependent Role="반품처리서">
+              <PropertyRef Name="입고검사서번호" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_발주리스트_발주서">
           <End Role="발주서" Type="Self.발주서" Multiplicity="1" />
           <End Role="발주리스트" Type="Self.발주리스트" Multiplicity="*" />
@@ -1058,7 +1153,7 @@ warning 6013: The table/view 'ERP.dbo.현장실적현황' does not have a primar
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_발주확인리스트_자재">
+        <Association Name="FK_발주확인리스트_자재1">
           <End Role="자재" Type="Self.자재" Multiplicity="1" />
           <End Role="발주확인리스트" Type="Self.발주확인리스트" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1105,6 +1200,30 @@ warning 6013: The table/view 'ERP.dbo.현장실적현황' does not have a primar
             <Dependent Role="분기별예산">
               <PropertyRef Name="예산코드" />
               <PropertyRef Name="신청연도" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_불량상세정보_불량코드내역">
+          <End Role="불량코드내역" Type="Self.불량코드내역" Multiplicity="1" />
+          <End Role="불량상세정보" Type="Self.불량상세정보" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="불량코드내역">
+              <PropertyRef Name="불량코드번호" />
+            </Principal>
+            <Dependent Role="불량상세정보">
+              <PropertyRef Name="불량코드번호" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_불량상세정보_입고검사서">
+          <End Role="입고검사서" Type="Self.입고검사서" Multiplicity="1" />
+          <End Role="불량상세정보" Type="Self.불량상세정보" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="입고검사서">
+              <PropertyRef Name="입고검사서번호" />
+            </Principal>
+            <Dependent Role="불량상세정보">
+              <PropertyRef Name="입고검사서번호" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -1192,6 +1311,18 @@ warning 6013: The table/view 'ERP.dbo.현장실적현황' does not have a primar
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_생산계획현황_제품">
+          <End Role="제품" Type="Self.제품" Multiplicity="1" />
+          <End Role="생산계획현황" Type="Self.생산계획현황" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="제품">
+              <PropertyRef Name="제품번호" />
+            </Principal>
+            <Dependent Role="생산계획현황">
+              <PropertyRef Name="제품번호" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_수주_납품업체">
           <End Role="납품업체" Type="Self.납품업체" Multiplicity="1" />
           <End Role="수주" Type="Self.수주" Multiplicity="*" />
@@ -1261,6 +1392,20 @@ warning 6013: The table/view 'ERP.dbo.현장실적현황' does not have a primar
             </Principal>
             <Dependent Role="역추적">
               <PropertyRef Name="세무유형" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_입고검사서_발주확인리스트">
+          <End Role="발주확인리스트" Type="Self.발주확인리스트" Multiplicity="1" />
+          <End Role="입고검사서" Type="Self.입고검사서" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="발주확인리스트">
+              <PropertyRef Name="발주확인서번호" />
+              <PropertyRef Name="자재번호" />
+            </Principal>
+            <Dependent Role="입고검사서">
+              <PropertyRef Name="발주확인서번호" />
+              <PropertyRef Name="자재번호" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -1374,12 +1519,38 @@ warning 6013: The table/view 'ERP.dbo.현장실적현황' does not have a primar
         </Association>
         <Association Name="FK_작업지시서_제품">
           <End Role="제품" Type="Self.제품" Multiplicity="1" />
-          <End Role="작업지시서" Type="Self.작업지시서" Multiplicity="*" />
+          <End Role="작업지시서11111" Type="Self.작업지시서11111" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="제품">
               <PropertyRef Name="제품번호" />
             </Principal>
-            <Dependent Role="작업지시서">
+            <Dependent Role="작업지시서11111">
+              <PropertyRef Name="제품번호" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_작업지시현황_공정">
+          <End Role="공정" Type="Self.공정" Multiplicity="1" />
+          <End Role="작업지시현황" Type="Self.작업지시현황" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="공정">
+              <PropertyRef Name="공정번호" />
+            </Principal>
+            <Dependent Role="작업지시현황">
+              <PropertyRef Name="공정번호" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_작업지시현황_생산계획현황">
+          <End Role="생산계획현황" Type="Self.생산계획현황" Multiplicity="1" />
+          <End Role="작업지시현황" Type="Self.작업지시현황" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="생산계획현황">
+              <PropertyRef Name="생산계획현황번호" />
+              <PropertyRef Name="제품번호" />
+            </Principal>
+            <Dependent Role="작업지시현황">
+              <PropertyRef Name="생산계획현황번호" />
               <PropertyRef Name="제품번호" />
             </Dependent>
           </ReferentialConstraint>
@@ -1467,8 +1638,10 @@ error 6004: The table 'ERP.dbo.현장실적현황' is referenced by a relationsh
           <EntitySet Name="경비구분" EntityType="Self.경비구분" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="계정과목" EntityType="Self.계정과목" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="계정과목그룹" EntityType="Self.계정과목그룹" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="계정과목등록" EntityType="Self.계정과목등록" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="고정자산" EntityType="Self.고정자산" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="공급업체" EntityType="Self.공급업체" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="공정" EntityType="Self.공정" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="공제별세부사항" EntityType="Self.공제별세부사항" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="과세별세액" EntityType="Self.과세별세액" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="근로소득" EntityType="Self.근로소득" Schema="dbo" store:Type="Tables" />
@@ -1486,6 +1659,7 @@ error 6004: The table 'ERP.dbo.현장실적현황' is referenced by a relationsh
           <EntitySet Name="납품업체" EntityType="Self.납품업체" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="메뉴등록" EntityType="Self.메뉴등록" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="메뉴별권한설정" EntityType="Self.메뉴별권한설정" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="반품처리서" EntityType="Self.반품처리서" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="발주리스트" EntityType="Self.발주리스트" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="발주서" EntityType="Self.발주서" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="발주확인리스트" EntityType="Self.발주확인리스트" Schema="dbo" store:Type="Tables" />
@@ -1493,6 +1667,8 @@ error 6004: The table 'ERP.dbo.현장실적현황' is referenced by a relationsh
           <EntitySet Name="부가세신고서" EntityType="Self.부가세신고서" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="부서등록" EntityType="Self.부서등록" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="분기별예산" EntityType="Self.분기별예산" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="불량상세정보" EntityType="Self.불량상세정보" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="불량코드내역" EntityType="Self.불량코드내역" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="사업장관할세무서" EntityType="Self.사업장관할세무서" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="사업장기본등록사항" EntityType="Self.사업장기본등록사항" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="사업장등록" EntityType="Self.사업장등록" Schema="dbo" store:Type="Tables" />
@@ -1502,6 +1678,7 @@ error 6004: The table 'ERP.dbo.현장실적현황' is referenced by a relationsh
           <EntitySet Name="사원정보" EntityType="Self.사원정보" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="사원정보등록" EntityType="Self.사원정보등록" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="상각방법" EntityType="Self.상각방법" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="생산계획현황" EntityType="Self.생산계획현황" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="세무유형" EntityType="Self.세무유형" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="소득/세액공제환경설정" EntityType="Self.소득/세액공제환경설정" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="수주" EntityType="Self.수주" Schema="dbo" store:Type="Tables" />
@@ -1512,6 +1689,7 @@ error 6004: The table 'ERP.dbo.현장실적현황' is referenced by a relationsh
           <EntitySet Name="역추적" EntityType="Self.역추적" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="예산" EntityType="Self.예산" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="인사/급여환경설정" EntityType="Self.인사/급여환경설정" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="입고검사서" EntityType="Self.입고검사서" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="자금계획달력" EntityType="Self.자금계획달력" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="자금과목" EntityType="Self.자금과목" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="자재" EntityType="Self.자재" Schema="dbo" store:Type="Tables" />
@@ -1520,7 +1698,8 @@ error 6004: The table 'ERP.dbo.현장실적현황' is referenced by a relationsh
           <EntitySet Name="작업완료확인서" EntityType="Self.작업완료확인서" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="작업지시" EntityType="Self.작업지시" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="작업지시리스트" EntityType="Self.작업지시리스트" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="작업지시서" EntityType="Self.작업지시서" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="작업지시서11111" EntityType="Self.작업지시서11111" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="작업지시현황" EntityType="Self.작업지시현황" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="전표" EntityType="Self.전표" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="전표리스트" EntityType="Self.전표리스트" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="제품" EntityType="Self.제품" Schema="dbo" store:Type="Tables" />
@@ -1595,6 +1774,14 @@ error 6004: The table 'ERP.dbo.현장실적현황' is referenced by a relationsh
             <End Role="사용자권한설정" EntitySet="사용자권한설정" />
             <End Role="메뉴별권한설정" EntitySet="메뉴별권한설정" />
           </AssociationSet>
+          <AssociationSet Name="FK_반품처리서_공급업체" Association="Self.FK_반품처리서_공급업체">
+            <End Role="공급업체" EntitySet="공급업체" />
+            <End Role="반품처리서" EntitySet="반품처리서" />
+          </AssociationSet>
+          <AssociationSet Name="FK_반품처리서_입고검사서" Association="Self.FK_반품처리서_입고검사서">
+            <End Role="입고검사서" EntitySet="입고검사서" />
+            <End Role="반품처리서" EntitySet="반품처리서" />
+          </AssociationSet>
           <AssociationSet Name="FK_발주리스트_발주서" Association="Self.FK_발주리스트_발주서">
             <End Role="발주서" EntitySet="발주서" />
             <End Role="발주리스트" EntitySet="발주리스트" />
@@ -1611,7 +1798,7 @@ error 6004: The table 'ERP.dbo.현장실적현황' is referenced by a relationsh
             <End Role="발주확인서" EntitySet="발주확인서" />
             <End Role="발주확인리스트" EntitySet="발주확인리스트" />
           </AssociationSet>
-          <AssociationSet Name="FK_발주확인리스트_자재" Association="Self.FK_발주확인리스트_자재">
+          <AssociationSet Name="FK_발주확인리스트_자재1" Association="Self.FK_발주확인리스트_자재1">
             <End Role="자재" EntitySet="자재" />
             <End Role="발주확인리스트" EntitySet="발주확인리스트" />
           </AssociationSet>
@@ -1626,6 +1813,14 @@ error 6004: The table 'ERP.dbo.현장실적현황' is referenced by a relationsh
           <AssociationSet Name="FK_분기별예산_예산" Association="Self.FK_분기별예산_예산">
             <End Role="예산" EntitySet="예산" />
             <End Role="분기별예산" EntitySet="분기별예산" />
+          </AssociationSet>
+          <AssociationSet Name="FK_불량상세정보_불량코드내역" Association="Self.FK_불량상세정보_불량코드내역">
+            <End Role="불량코드내역" EntitySet="불량코드내역" />
+            <End Role="불량상세정보" EntitySet="불량상세정보" />
+          </AssociationSet>
+          <AssociationSet Name="FK_불량상세정보_입고검사서" Association="Self.FK_불량상세정보_입고검사서">
+            <End Role="입고검사서" EntitySet="입고검사서" />
+            <End Role="불량상세정보" EntitySet="불량상세정보" />
           </AssociationSet>
           <AssociationSet Name="FK_사업장관할세무서_사업장기본등록사항" Association="Self.FK_사업장관할세무서_사업장기본등록사항">
             <End Role="사업장기본등록사항" EntitySet="사업장기본등록사항" />
@@ -1655,6 +1850,10 @@ error 6004: The table 'ERP.dbo.현장실적현황' is referenced by a relationsh
             <End Role="사원정보등록" EntitySet="사원정보등록" />
             <End Role="사원정보" EntitySet="사원정보" />
           </AssociationSet>
+          <AssociationSet Name="FK_생산계획현황_제품" Association="Self.FK_생산계획현황_제품">
+            <End Role="제품" EntitySet="제품" />
+            <End Role="생산계획현황" EntitySet="생산계획현황" />
+          </AssociationSet>
           <AssociationSet Name="FK_수주_납품업체" Association="Self.FK_수주_납품업체">
             <End Role="납품업체" EntitySet="납품업체" />
             <End Role="수주" EntitySet="수주" />
@@ -1678,6 +1877,10 @@ error 6004: The table 'ERP.dbo.현장실적현황' is referenced by a relationsh
           <AssociationSet Name="FK_역추적_세무유형" Association="Self.FK_역추적_세무유형">
             <End Role="세무유형" EntitySet="세무유형" />
             <End Role="역추적" EntitySet="역추적" />
+          </AssociationSet>
+          <AssociationSet Name="FK_입고검사서_발주확인리스트" Association="Self.FK_입고검사서_발주확인리스트">
+            <End Role="발주확인리스트" EntitySet="발주확인리스트" />
+            <End Role="입고검사서" EntitySet="입고검사서" />
           </AssociationSet>
           <AssociationSet Name="FK_자금계획달력_거래처" Association="Self.FK_자금계획달력_거래처">
             <End Role="거래처" EntitySet="거래처" />
@@ -1717,7 +1920,15 @@ error 6004: The table 'ERP.dbo.현장실적현황' is referenced by a relationsh
           </AssociationSet>
           <AssociationSet Name="FK_작업지시서_제품" Association="Self.FK_작업지시서_제품">
             <End Role="제품" EntitySet="제품" />
-            <End Role="작업지시서" EntitySet="작업지시서" />
+            <End Role="작업지시서11111" EntitySet="작업지시서11111" />
+          </AssociationSet>
+          <AssociationSet Name="FK_작업지시현황_공정" Association="Self.FK_작업지시현황_공정">
+            <End Role="공정" EntitySet="공정" />
+            <End Role="작업지시현황" EntitySet="작업지시현황" />
+          </AssociationSet>
+          <AssociationSet Name="FK_작업지시현황_생산계획현황" Association="Self.FK_작업지시현황_생산계획현황">
+            <End Role="생산계획현황" EntitySet="생산계획현황" />
+            <End Role="작업지시현황" EntitySet="작업지시현황" />
           </AssociationSet>
           <AssociationSet Name="FK_전표리스트_거래처" Association="Self.FK_전표리스트_거래처">
             <End Role="거래처" EntitySet="거래처" />
@@ -1787,7 +1998,7 @@ error 6004: The table 'ERP.dbo.현장실적현황' is referenced by a relationsh
           <Property Name="계정과목명" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="출력계정명" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="계정구분" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="차대구분" Type="Boolean" Nullable="false" />
+          <Property Name="차대구분" Type="Boolean" />
           <Property Name="입력구분" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="필수입력여부" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="그룹코드번호" Type="Int32" Nullable="false" />
@@ -1801,6 +2012,14 @@ error 6004: The table 'ERP.dbo.현장실적현황' is referenced by a relationsh
           <Property Name="그룹코드번호" Type="Int32" Nullable="false" />
           <Property Name="그룹명" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="계정과목" Relationship="Self.FK_계정과목_계정과목그룹코드" FromRole="계정과목그룹" ToRole="계정과목" />
+        </EntityType>
+        <EntityType Name="계정과목등록">
+          <Key>
+            <PropertyRef Name="CodeNum" />
+          </Key>
+          <Property Name="CodeNum" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PrentKey" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="고정자산">
           <Key>
@@ -1826,8 +2045,18 @@ error 6004: The table 'ERP.dbo.현장실적현황' is referenced by a relationsh
           </Key>
           <Property Name="공급업체번호" Type="Int32" Nullable="false" />
           <Property Name="공급업체명" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="반품처리서" Relationship="Self.FK_반품처리서_공급업체" FromRole="공급업체" ToRole="반품처리서" />
           <NavigationProperty Name="발주서" Relationship="Self.FK_발주서_공급업체" FromRole="공급업체" ToRole="발주서" />
           <NavigationProperty Name="발주확인서" Relationship="Self.FK_발주확인서_공급업체" FromRole="공급업체" ToRole="발주확인서" />
+        </EntityType>
+        <EntityType Name="공정">
+          <Key>
+            <PropertyRef Name="공정번호" />
+          </Key>
+          <Property Name="공정번호" Type="Int32" Nullable="false" />
+          <Property Name="공정명" Type="Int32" Nullable="false" />
+          <Property Name="공정시간" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="작업지시현황" Relationship="Self.FK_작업지시현황_공정" FromRole="공정" ToRole="작업지시현황" />
         </EntityType>
         <EntityType Name="공제별세부사항">
           <Key>
@@ -2021,6 +2250,7 @@ error 6004: The table 'ERP.dbo.현장실적현황' is referenced by a relationsh
           </Key>
           <Property Name="납품업체번호" Type="Int32" Nullable="false" />
           <Property Name="납품업체명" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="수주확정일" Type="Int32" />
           <NavigationProperty Name="수주" Relationship="Self.FK_수주_납품업체" FromRole="납품업체" ToRole="수주" />
           <NavigationProperty Name="수주확인서" Relationship="Self.FK_수주확인서_납품업체" FromRole="납품업체" ToRole="수주확인서" />
         </EntityType>
@@ -2044,6 +2274,16 @@ error 6004: The table 'ERP.dbo.현장실적현황' is referenced by a relationsh
           <Property Name="출력" Type="Boolean" Nullable="false" />
           <Property Name="메뉴명" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="사용자권한설정" Relationship="Self.FK_메뉴별권한설정_사용자권한설정1" FromRole="메뉴별권한설정" ToRole="사용자권한설정" />
+        </EntityType>
+        <EntityType Name="반품처리서">
+          <Key>
+            <PropertyRef Name="반품처리서번호" />
+          </Key>
+          <Property Name="반품처리서번호" Type="Int32" Nullable="false" />
+          <Property Name="공급업체번호" Type="Int32" Nullable="false" />
+          <Property Name="입고검사서번호" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="공급업체" Relationship="Self.FK_반품처리서_공급업체" FromRole="반품처리서" ToRole="공급업체" />
+          <NavigationProperty Name="입고검사서" Relationship="Self.FK_반품처리서_입고검사서" FromRole="반품처리서" ToRole="입고검사서" />
         </EntityType>
         <EntityType Name="발주리스트">
           <Key>
@@ -2075,10 +2315,9 @@ error 6004: The table 'ERP.dbo.현장실적현황' is referenced by a relationsh
           <Property Name="발주확인서번호" Type="Int32" Nullable="false" />
           <Property Name="자재번호" Type="Int32" Nullable="false" />
           <Property Name="수량" Type="Int32" Nullable="false" />
-          <Property Name="납기여부" Type="Int32" Nullable="false" />
-          <Property Name="수입검사여부" Type="Int32" Nullable="false" />
           <NavigationProperty Name="발주확인서" Relationship="Self.FK_발주확인리스트_발주확인서" FromRole="발주확인리스트" ToRole="발주확인서" />
-          <NavigationProperty Name="자재" Relationship="Self.FK_발주확인리스트_자재" FromRole="발주확인리스트" ToRole="자재" />
+          <NavigationProperty Name="자재" Relationship="Self.FK_발주확인리스트_자재1" FromRole="발주확인리스트" ToRole="자재" />
+          <NavigationProperty Name="입고검사서" Relationship="Self.FK_입고검사서_발주확인리스트" FromRole="발주확인리스트" ToRole="입고검사서" />
         </EntityType>
         <EntityType Name="발주확인서">
           <Key>
@@ -2133,6 +2372,25 @@ error 6004: The table 'ERP.dbo.현장실적현황' is referenced by a relationsh
           <Property Name="예산코드" Type="Int32" Nullable="false" />
           <Property Name="신청연도" Type="DateTime" Nullable="false" Precision="0" />
           <NavigationProperty Name="예산" Relationship="Self.FK_분기별예산_예산" FromRole="분기별예산" ToRole="예산" />
+        </EntityType>
+        <EntityType Name="불량상세정보">
+          <Key>
+            <PropertyRef Name="불량코드번호" />
+            <PropertyRef Name="입고검사서번호" />
+          </Key>
+          <Property Name="불량코드번호" Type="Int32" Nullable="false" />
+          <Property Name="입고검사서번호" Type="Int32" Nullable="false" />
+          <Property Name="불량수량" Type="Int32" />
+          <NavigationProperty Name="불량코드내역" Relationship="Self.FK_불량상세정보_불량코드내역" FromRole="불량상세정보" ToRole="불량코드내역" />
+          <NavigationProperty Name="입고검사서" Relationship="Self.FK_불량상세정보_입고검사서" FromRole="불량상세정보" ToRole="입고검사서" />
+        </EntityType>
+        <EntityType Name="불량코드내역">
+          <Key>
+            <PropertyRef Name="불량코드번호" />
+          </Key>
+          <Property Name="불량코드번호" Type="Int32" Nullable="false" />
+          <Property Name="불량명" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="불량상세정보" Relationship="Self.FK_불량상세정보_불량코드내역" FromRole="불량코드내역" ToRole="불량상세정보" />
         </EntityType>
         <EntityType Name="사업장관할세무서">
           <Key>
@@ -2262,6 +2520,19 @@ error 6004: The table 'ERP.dbo.현장실적현황' is referenced by a relationsh
           <Property Name="상각방법명" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="고정자산" Relationship="Self.FK_고정자산_상각방법" FromRole="상각방법" ToRole="고정자산" />
         </EntityType>
+        <EntityType Name="생산계획현황">
+          <Key>
+            <PropertyRef Name="생산계획현황번호" />
+            <PropertyRef Name="제품번호" />
+          </Key>
+          <Property Name="생산계획현황번호" Type="Int32" Nullable="false" />
+          <Property Name="작업예정일" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="작업확정일" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="수량" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="제품번호" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="제품" Relationship="Self.FK_생산계획현황_제품" FromRole="생산계획현황" ToRole="제품" />
+          <NavigationProperty Name="작업지시현황" Relationship="Self.FK_작업지시현황_생산계획현황" FromRole="생산계획현황" ToRole="작업지시현황" />
+        </EntityType>
         <EntityType Name="세무유형">
           <Key>
             <PropertyRef Name="세무유형ID" />
@@ -2380,6 +2651,19 @@ error 6004: The table 'ERP.dbo.현장실적현황' is referenced by a relationsh
           <Property Name="시작일" Type="Int32" Nullable="false" />
           <NavigationProperty Name="기준설정" Relationship="Self.FK_기준설정_인사_급여환경설정" FromRole="인사_급여환경설정" ToRole="기준설정" />
         </EntityType>
+        <EntityType Name="입고검사서">
+          <Key>
+            <PropertyRef Name="입고검사서번호" />
+          </Key>
+          <Property Name="입고검사서번호" Type="Int32" Nullable="false" />
+          <Property Name="발주확인서번호" Type="Int32" Nullable="false" />
+          <Property Name="자재번호" Type="Int32" Nullable="false" />
+          <Property Name="양품수량" Type="Int32" Nullable="false" />
+          <Property Name="불량수량" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="반품처리서" Relationship="Self.FK_반품처리서_입고검사서" FromRole="입고검사서" ToRole="반품처리서" />
+          <NavigationProperty Name="발주확인리스트" Relationship="Self.FK_입고검사서_발주확인리스트" FromRole="입고검사서" ToRole="발주확인리스트" />
+          <NavigationProperty Name="불량상세정보" Relationship="Self.FK_불량상세정보_입고검사서" FromRole="입고검사서" ToRole="불량상세정보" />
+        </EntityType>
         <EntityType Name="자금계획달력">
           <Key>
             <PropertyRef Name="일자" />
@@ -2412,7 +2696,7 @@ error 6004: The table 'ERP.dbo.현장실적현황' is referenced by a relationsh
           <Property Name="재고량" Type="Int32" Nullable="false" />
           <Property Name="구매단가" Type="Int32" Nullable="false" />
           <NavigationProperty Name="발주리스트" Relationship="Self.FK_발주리스트_자재" FromRole="자재" ToRole="발주리스트" />
-          <NavigationProperty Name="발주확인리스트" Relationship="Self.FK_발주확인리스트_자재" FromRole="자재" ToRole="발주확인리스트" />
+          <NavigationProperty Name="발주확인리스트" Relationship="Self.FK_발주확인리스트_자재1" FromRole="자재" ToRole="발주확인리스트" />
           <NavigationProperty Name="자재명세서" Relationship="Self.FK_자재명세서_자재1" FromRole="자재" ToRole="자재명세서" />
         </EntityType>
         <EntityType Name="자재명세서">
@@ -2472,7 +2756,7 @@ error 6004: The table 'ERP.dbo.현장실적현황' is referenced by a relationsh
           <NavigationProperty Name="작업지시" Relationship="Self.FK_작업지시리스트_작업지시" FromRole="작업지시리스트" ToRole="작업지시" />
           <NavigationProperty Name="제품" Relationship="Self.FK_작업지시리스트_제품" FromRole="작업지시리스트" ToRole="제품" />
         </EntityType>
-        <EntityType Name="작업지시서">
+        <EntityType Name="작업지시서11111">
           <Key>
             <PropertyRef Name="작업지시번호" />
           </Key>
@@ -2481,7 +2765,24 @@ error 6004: The table 'ERP.dbo.현장실적현황' is referenced by a relationsh
           <Property Name="수량" Type="Int32" Nullable="false" />
           <Property Name="작업지시일" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="작업완료일" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="제품" Relationship="Self.FK_작업지시서_제품" FromRole="작업지시서" ToRole="제품" />
+          <NavigationProperty Name="제품" Relationship="Self.FK_작업지시서_제품" FromRole="작업지시서11111" ToRole="제품" />
+        </EntityType>
+        <EntityType Name="작업지시현황">
+          <Key>
+            <PropertyRef Name="작업지시번호" />
+          </Key>
+          <Property Name="작업지시번호" Type="Int32" Nullable="false" />
+          <Property Name="생산계획현황번호" Type="Int32" Nullable="false" />
+          <Property Name="제품번호" Type="Int32" Nullable="false" />
+          <Property Name="수량" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="작업장번호" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="작업상태번호" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="작업지시일" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="작업완료_예정_일" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="자재명세번호" Type="Int32" Nullable="false" />
+          <Property Name="공정번호" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="공정" Relationship="Self.FK_작업지시현황_공정" FromRole="작업지시현황" ToRole="공정" />
+          <NavigationProperty Name="생산계획현황" Relationship="Self.FK_작업지시현황_생산계획현황" FromRole="작업지시현황" ToRole="생산계획현황" />
         </EntityType>
         <EntityType Name="전표">
           <Key>
@@ -2525,20 +2826,17 @@ error 6004: The table 'ERP.dbo.현장실적현황' is referenced by a relationsh
           <Property Name="제품번호" Type="Int32" Nullable="false" />
           <Property Name="제품명" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="안전재고량" Type="Int32" />
-          <Property Name="자재명세번호" Type="Int32" />
           <Property Name="재고량" Type="Int32" />
-          <Property Name="품목군" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="품목군" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="검사여부" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="일별생산량" Type="Int32" />
           <Property Name="표준원가" Type="Int32" />
           <Property Name="실제원가" Type="Int32" />
-          <Property Name="최종공정" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="전공정" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="후공정" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="외경" Type="Int32" />
           <Property Name="층" Type="Int32" />
           <Property Name="리드타임" Type="Int32" />
           <Property Name="LOT수량" Type="Int32" />
+          <NavigationProperty Name="생산계획현황" Relationship="Self.FK_생산계획현황_제품" FromRole="제품" ToRole="생산계획현황" />
           <NavigationProperty Name="수주" Relationship="Self.FK_수주_제품" FromRole="제품" ToRole="수주" />
           <NavigationProperty Name="수주확인리스트" Relationship="Self.FK_수주확인리스트_제품" FromRole="제품" ToRole="수주확인리스트" />
           <NavigationProperty Name="자재명세서" Relationship="Self.FK_자재명세서_제품" FromRole="제품" ToRole="자재명세서" />
@@ -2546,7 +2844,7 @@ error 6004: The table 'ERP.dbo.현장실적현황' is referenced by a relationsh
           <NavigationProperty Name="작업완료확인서" Relationship="Self.FK_작업완료확인서_제품" FromRole="제품" ToRole="작업완료확인서" />
           <NavigationProperty Name="작업지시" Relationship="Self.FK_작업지시_제품" FromRole="제품" ToRole="작업지시" />
           <NavigationProperty Name="작업지시리스트" Relationship="Self.FK_작업지시리스트_제품" FromRole="제품" ToRole="작업지시리스트" />
-          <NavigationProperty Name="작업지시서" Relationship="Self.FK_작업지시서_제품" FromRole="제품" ToRole="작업지시서" />
+          <NavigationProperty Name="작업지시서11111" Relationship="Self.FK_작업지시서_제품" FromRole="제품" ToRole="작업지시서11111" />
         </EntityType>
         <EntityType Name="코드">
           <Key>
@@ -2747,6 +3045,18 @@ error 6004: The table 'ERP.dbo.현장실적현황' is referenced by a relationsh
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_반품처리서_공급업체">
+          <End Role="공급업체" Type="Self.공급업체" Multiplicity="1" />
+          <End Role="반품처리서" Type="Self.반품처리서" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="공급업체">
+              <PropertyRef Name="공급업체번호" />
+            </Principal>
+            <Dependent Role="반품처리서">
+              <PropertyRef Name="공급업체번호" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_발주서_공급업체">
           <End Role="공급업체" Type="Self.공급업체" Multiplicity="1" />
           <End Role="발주서" Type="Self.발주서" Multiplicity="*" />
@@ -2768,6 +3078,18 @@ error 6004: The table 'ERP.dbo.현장실적현황' is referenced by a relationsh
             </Principal>
             <Dependent Role="발주확인서">
               <PropertyRef Name="공급업체번호" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_작업지시현황_공정">
+          <End Role="공정" Type="Self.공정" Multiplicity="1" />
+          <End Role="작업지시현황" Type="Self.작업지시현황" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="공정">
+              <PropertyRef Name="공정번호" />
+            </Principal>
+            <Dependent Role="작업지시현황">
+              <PropertyRef Name="공정번호" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -2953,6 +3275,18 @@ error 6004: The table 'ERP.dbo.현장실적현황' is referenced by a relationsh
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_반품처리서_입고검사서">
+          <End Role="입고검사서" Type="Self.입고검사서" Multiplicity="1" />
+          <End Role="반품처리서" Type="Self.반품처리서" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="입고검사서">
+              <PropertyRef Name="입고검사서번호" />
+            </Principal>
+            <Dependent Role="반품처리서">
+              <PropertyRef Name="입고검사서번호" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_발주리스트_발주서">
           <End Role="발주서" Type="Self.발주서" Multiplicity="1" />
           <End Role="발주리스트" Type="Self.발주리스트" Multiplicity="*" />
@@ -2989,7 +3323,7 @@ error 6004: The table 'ERP.dbo.현장실적현황' is referenced by a relationsh
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_발주확인리스트_자재">
+        <Association Name="FK_발주확인리스트_자재1">
           <End Role="자재" Type="Self.자재" Multiplicity="1" />
           <End Role="발주확인리스트" Type="Self.발주확인리스트" Multiplicity="*" />
           <ReferentialConstraint>
@@ -2997,6 +3331,20 @@ error 6004: The table 'ERP.dbo.현장실적현황' is referenced by a relationsh
               <PropertyRef Name="자재번호" />
             </Principal>
             <Dependent Role="발주확인리스트">
+              <PropertyRef Name="자재번호" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_입고검사서_발주확인리스트">
+          <End Role="발주확인리스트" Type="Self.발주확인리스트" Multiplicity="1" />
+          <End Role="입고검사서" Type="Self.입고검사서" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="발주확인리스트">
+              <PropertyRef Name="발주확인서번호" />
+              <PropertyRef Name="자재번호" />
+            </Principal>
+            <Dependent Role="입고검사서">
+              <PropertyRef Name="발주확인서번호" />
               <PropertyRef Name="자재번호" />
             </Dependent>
           </ReferentialConstraint>
@@ -3036,6 +3384,30 @@ error 6004: The table 'ERP.dbo.현장실적현황' is referenced by a relationsh
             <Dependent Role="분기별예산">
               <PropertyRef Name="예산코드" />
               <PropertyRef Name="신청연도" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_불량상세정보_불량코드내역">
+          <End Role="불량코드내역" Type="Self.불량코드내역" Multiplicity="1" />
+          <End Role="불량상세정보" Type="Self.불량상세정보" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="불량코드내역">
+              <PropertyRef Name="불량코드번호" />
+            </Principal>
+            <Dependent Role="불량상세정보">
+              <PropertyRef Name="불량코드번호" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_불량상세정보_입고검사서">
+          <End Role="입고검사서" Type="Self.입고검사서" Multiplicity="1" />
+          <End Role="불량상세정보" Type="Self.불량상세정보" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="입고검사서">
+              <PropertyRef Name="입고검사서번호" />
+            </Principal>
+            <Dependent Role="불량상세정보">
+              <PropertyRef Name="입고검사서번호" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -3096,6 +3468,32 @@ error 6004: The table 'ERP.dbo.현장실적현황' is referenced by a relationsh
             </Principal>
             <Dependent Role="사원정보">
               <PropertyRef Name="인사정보등록번호" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_생산계획현황_제품">
+          <End Role="제품" Type="Self.제품" Multiplicity="1" />
+          <End Role="생산계획현황" Type="Self.생산계획현황" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="제품">
+              <PropertyRef Name="제품번호" />
+            </Principal>
+            <Dependent Role="생산계획현황">
+              <PropertyRef Name="제품번호" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_작업지시현황_생산계획현황">
+          <End Role="생산계획현황" Type="Self.생산계획현황" Multiplicity="1" />
+          <End Role="작업지시현황" Type="Self.작업지시현황" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="생산계획현황">
+              <PropertyRef Name="생산계획현황번호" />
+              <PropertyRef Name="제품번호" />
+            </Principal>
+            <Dependent Role="작업지시현황">
+              <PropertyRef Name="생산계획현황번호" />
+              <PropertyRef Name="제품번호" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -3245,12 +3643,12 @@ error 6004: The table 'ERP.dbo.현장실적현황' is referenced by a relationsh
         </Association>
         <Association Name="FK_작업지시서_제품">
           <End Role="제품" Type="Self.제품" Multiplicity="1" />
-          <End Role="작업지시서" Type="Self.작업지시서" Multiplicity="*" />
+          <End Role="작업지시서11111" Type="Self.작업지시서11111" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="제품">
               <PropertyRef Name="제품번호" />
             </Principal>
-            <Dependent Role="작업지시서">
+            <Dependent Role="작업지시서11111">
               <PropertyRef Name="제품번호" />
             </Dependent>
           </ReferentialConstraint>
@@ -3299,8 +3697,10 @@ error 6004: The table 'ERP.dbo.현장실적현황' is referenced by a relationsh
           <EntitySet Name="경비구분" EntityType="Self.경비구분" />
           <EntitySet Name="계정과목" EntityType="Self.계정과목" />
           <EntitySet Name="계정과목그룹" EntityType="Self.계정과목그룹" />
+          <EntitySet Name="계정과목등록" EntityType="Self.계정과목등록" />
           <EntitySet Name="고정자산" EntityType="Self.고정자산" />
           <EntitySet Name="공급업체" EntityType="Self.공급업체" />
+          <EntitySet Name="공정" EntityType="Self.공정" />
           <EntitySet Name="공제별세부사항" EntityType="Self.공제별세부사항" />
           <EntitySet Name="과세별세액" EntityType="Self.과세별세액" />
           <EntitySet Name="근로소득" EntityType="Self.근로소득" />
@@ -3318,6 +3718,7 @@ error 6004: The table 'ERP.dbo.현장실적현황' is referenced by a relationsh
           <EntitySet Name="납품업체" EntityType="Self.납품업체" />
           <EntitySet Name="메뉴등록" EntityType="Self.메뉴등록" />
           <EntitySet Name="메뉴별권한설정" EntityType="Self.메뉴별권한설정" />
+          <EntitySet Name="반품처리서" EntityType="Self.반품처리서" />
           <EntitySet Name="발주리스트" EntityType="Self.발주리스트" />
           <EntitySet Name="발주서" EntityType="Self.발주서" />
           <EntitySet Name="발주확인리스트" EntityType="Self.발주확인리스트" />
@@ -3325,6 +3726,8 @@ error 6004: The table 'ERP.dbo.현장실적현황' is referenced by a relationsh
           <EntitySet Name="부가세신고서" EntityType="Self.부가세신고서" />
           <EntitySet Name="부서등록" EntityType="Self.부서등록" />
           <EntitySet Name="분기별예산" EntityType="Self.분기별예산" />
+          <EntitySet Name="불량상세정보" EntityType="Self.불량상세정보" />
+          <EntitySet Name="불량코드내역" EntityType="Self.불량코드내역" />
           <EntitySet Name="사업장관할세무서" EntityType="Self.사업장관할세무서" />
           <EntitySet Name="사업장기본등록사항" EntityType="Self.사업장기본등록사항" />
           <EntitySet Name="사업장등록" EntityType="Self.사업장등록" />
@@ -3334,6 +3737,7 @@ error 6004: The table 'ERP.dbo.현장실적현황' is referenced by a relationsh
           <EntitySet Name="사원정보" EntityType="Self.사원정보" />
           <EntitySet Name="사원정보등록" EntityType="Self.사원정보등록" />
           <EntitySet Name="상각방법" EntityType="Self.상각방법" />
+          <EntitySet Name="생산계획현황" EntityType="Self.생산계획현황" />
           <EntitySet Name="세무유형" EntityType="Self.세무유형" />
           <EntitySet Name="소득_세액공제환경설정" EntityType="Self.소득_세액공제환경설정" />
           <EntitySet Name="수주" EntityType="Self.수주" />
@@ -3344,6 +3748,7 @@ error 6004: The table 'ERP.dbo.현장실적현황' is referenced by a relationsh
           <EntitySet Name="역추적" EntityType="Self.역추적" />
           <EntitySet Name="예산" EntityType="Self.예산" />
           <EntitySet Name="인사_급여환경설정" EntityType="Self.인사_급여환경설정" />
+          <EntitySet Name="입고검사서" EntityType="Self.입고검사서" />
           <EntitySet Name="자금계획달력" EntityType="Self.자금계획달력" />
           <EntitySet Name="자금과목" EntityType="Self.자금과목" />
           <EntitySet Name="자재" EntityType="Self.자재" />
@@ -3352,7 +3757,8 @@ error 6004: The table 'ERP.dbo.현장실적현황' is referenced by a relationsh
           <EntitySet Name="작업완료확인서" EntityType="Self.작업완료확인서" />
           <EntitySet Name="작업지시" EntityType="Self.작업지시" />
           <EntitySet Name="작업지시리스트" EntityType="Self.작업지시리스트" />
-          <EntitySet Name="작업지시서" EntityType="Self.작업지시서" />
+          <EntitySet Name="작업지시서11111" EntityType="Self.작업지시서11111" />
+          <EntitySet Name="작업지시현황" EntityType="Self.작업지시현황" />
           <EntitySet Name="전표" EntityType="Self.전표" />
           <EntitySet Name="전표리스트" EntityType="Self.전표리스트" />
           <EntitySet Name="제품" EntityType="Self.제품" />
@@ -3395,6 +3801,10 @@ error 6004: The table 'ERP.dbo.현장실적현황' is referenced by a relationsh
             <End Role="상각방법" EntitySet="상각방법" />
             <End Role="고정자산" EntitySet="고정자산" />
           </AssociationSet>
+          <AssociationSet Name="FK_반품처리서_공급업체" Association="Self.FK_반품처리서_공급업체">
+            <End Role="공급업체" EntitySet="공급업체" />
+            <End Role="반품처리서" EntitySet="반품처리서" />
+          </AssociationSet>
           <AssociationSet Name="FK_발주서_공급업체" Association="Self.FK_발주서_공급업체">
             <End Role="공급업체" EntitySet="공급업체" />
             <End Role="발주서" EntitySet="발주서" />
@@ -3402,6 +3812,10 @@ error 6004: The table 'ERP.dbo.현장실적현황' is referenced by a relationsh
           <AssociationSet Name="FK_발주확인서_공급업체" Association="Self.FK_발주확인서_공급업체">
             <End Role="공급업체" EntitySet="공급업체" />
             <End Role="발주확인서" EntitySet="발주확인서" />
+          </AssociationSet>
+          <AssociationSet Name="FK_작업지시현황_공정" Association="Self.FK_작업지시현황_공정">
+            <End Role="공정" EntitySet="공정" />
+            <End Role="작업지시현황" EntitySet="작업지시현황" />
           </AssociationSet>
           <AssociationSet Name="FK_공제별세부사항_근로소득" Association="Self.FK_공제별세부사항_근로소득">
             <End Role="근로소득" EntitySet="근로소득" />
@@ -3463,6 +3877,10 @@ error 6004: The table 'ERP.dbo.현장실적현황' is referenced by a relationsh
             <End Role="사용자권한설정" EntitySet="사용자권한설정" />
             <End Role="메뉴별권한설정" EntitySet="메뉴별권한설정" />
           </AssociationSet>
+          <AssociationSet Name="FK_반품처리서_입고검사서" Association="Self.FK_반품처리서_입고검사서">
+            <End Role="입고검사서" EntitySet="입고검사서" />
+            <End Role="반품처리서" EntitySet="반품처리서" />
+          </AssociationSet>
           <AssociationSet Name="FK_발주리스트_발주서" Association="Self.FK_발주리스트_발주서">
             <End Role="발주서" EntitySet="발주서" />
             <End Role="발주리스트" EntitySet="발주리스트" />
@@ -3475,9 +3893,13 @@ error 6004: The table 'ERP.dbo.현장실적현황' is referenced by a relationsh
             <End Role="발주확인서" EntitySet="발주확인서" />
             <End Role="발주확인리스트" EntitySet="발주확인리스트" />
           </AssociationSet>
-          <AssociationSet Name="FK_발주확인리스트_자재" Association="Self.FK_발주확인리스트_자재">
+          <AssociationSet Name="FK_발주확인리스트_자재1" Association="Self.FK_발주확인리스트_자재1">
             <End Role="자재" EntitySet="자재" />
             <End Role="발주확인리스트" EntitySet="발주확인리스트" />
+          </AssociationSet>
+          <AssociationSet Name="FK_입고검사서_발주확인리스트" Association="Self.FK_입고검사서_발주확인리스트">
+            <End Role="발주확인리스트" EntitySet="발주확인리스트" />
+            <End Role="입고검사서" EntitySet="입고검사서" />
           </AssociationSet>
           <AssociationSet Name="FK_사업장기본등록사항_부가세신고서" Association="Self.FK_사업장기본등록사항_부가세신고서">
             <End Role="부가세신고서" EntitySet="부가세신고서" />
@@ -3490,6 +3912,14 @@ error 6004: The table 'ERP.dbo.현장실적현황' is referenced by a relationsh
           <AssociationSet Name="FK_분기별예산_예산" Association="Self.FK_분기별예산_예산">
             <End Role="예산" EntitySet="예산" />
             <End Role="분기별예산" EntitySet="분기별예산" />
+          </AssociationSet>
+          <AssociationSet Name="FK_불량상세정보_불량코드내역" Association="Self.FK_불량상세정보_불량코드내역">
+            <End Role="불량코드내역" EntitySet="불량코드내역" />
+            <End Role="불량상세정보" EntitySet="불량상세정보" />
+          </AssociationSet>
+          <AssociationSet Name="FK_불량상세정보_입고검사서" Association="Self.FK_불량상세정보_입고검사서">
+            <End Role="입고검사서" EntitySet="입고검사서" />
+            <End Role="불량상세정보" EntitySet="불량상세정보" />
           </AssociationSet>
           <AssociationSet Name="FK_사업장관할세무서_사업장기본등록사항" Association="Self.FK_사업장관할세무서_사업장기본등록사항">
             <End Role="사업장기본등록사항" EntitySet="사업장기본등록사항" />
@@ -3510,6 +3940,14 @@ error 6004: The table 'ERP.dbo.현장실적현황' is referenced by a relationsh
           <AssociationSet Name="FK_사원정보_사원정보등록" Association="Self.FK_사원정보_사원정보등록">
             <End Role="사원정보등록" EntitySet="사원정보등록" />
             <End Role="사원정보" EntitySet="사원정보" />
+          </AssociationSet>
+          <AssociationSet Name="FK_생산계획현황_제품" Association="Self.FK_생산계획현황_제품">
+            <End Role="제품" EntitySet="제품" />
+            <End Role="생산계획현황" EntitySet="생산계획현황" />
+          </AssociationSet>
+          <AssociationSet Name="FK_작업지시현황_생산계획현황" Association="Self.FK_작업지시현황_생산계획현황">
+            <End Role="생산계획현황" EntitySet="생산계획현황" />
+            <End Role="작업지시현황" EntitySet="작업지시현황" />
           </AssociationSet>
           <AssociationSet Name="FK_역추적_세무유형" Association="Self.FK_역추적_세무유형">
             <End Role="세무유형" EntitySet="세무유형" />
@@ -3561,7 +3999,7 @@ error 6004: The table 'ERP.dbo.현장실적현황' is referenced by a relationsh
           </AssociationSet>
           <AssociationSet Name="FK_작업지시서_제품" Association="Self.FK_작업지시서_제품">
             <End Role="제품" EntitySet="제품" />
-            <End Role="작업지시서" EntitySet="작업지시서" />
+            <End Role="작업지시서11111" EntitySet="작업지시서11111" />
           </AssociationSet>
           <AssociationSet Name="FK_전표리스트_전표" Association="Self.FK_전표리스트_전표">
             <End Role="전표" EntitySet="전표" />
@@ -3632,6 +4070,15 @@ error 6004: The table 'ERP.dbo.현장실적현황' is referenced by a relationsh
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="계정과목등록">
+            <EntityTypeMapping TypeName="ERPModel.계정과목등록">
+              <MappingFragment StoreEntitySet="계정과목등록">
+                <ScalarProperty Name="CodeNum" ColumnName="CodeNum" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="PrentKey" ColumnName="PrentKey" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="고정자산">
             <EntityTypeMapping TypeName="ERPModel.고정자산">
               <MappingFragment StoreEntitySet="고정자산">
@@ -3654,6 +4101,15 @@ error 6004: The table 'ERP.dbo.현장실적현황' is referenced by a relationsh
               <MappingFragment StoreEntitySet="공급업체">
                 <ScalarProperty Name="공급업체번호" ColumnName="공급업체번호" />
                 <ScalarProperty Name="공급업체명" ColumnName="공급업체명" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="공정">
+            <EntityTypeMapping TypeName="ERPModel.공정">
+              <MappingFragment StoreEntitySet="공정">
+                <ScalarProperty Name="공정번호" ColumnName="공정번호" />
+                <ScalarProperty Name="공정명" ColumnName="공정명" />
+                <ScalarProperty Name="공정시간" ColumnName="공정시간" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -3841,6 +4297,7 @@ error 6004: The table 'ERP.dbo.현장실적현황' is referenced by a relationsh
               <MappingFragment StoreEntitySet="납품업체">
                 <ScalarProperty Name="납품업체번호" ColumnName="납품업체번호" />
                 <ScalarProperty Name="납품업체명" ColumnName="납품업체명" />
+                <ScalarProperty Name="수주확정일" ColumnName="수주확정일" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -3863,6 +4320,15 @@ error 6004: The table 'ERP.dbo.현장실적현황' is referenced by a relationsh
                 <ScalarProperty Name="삭제" ColumnName="삭제" />
                 <ScalarProperty Name="출력" ColumnName="출력" />
                 <ScalarProperty Name="메뉴명" ColumnName="메뉴명" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="반품처리서">
+            <EntityTypeMapping TypeName="ERPModel.반품처리서">
+              <MappingFragment StoreEntitySet="반품처리서">
+                <ScalarProperty Name="반품처리서번호" ColumnName="반품처리서번호" />
+                <ScalarProperty Name="공급업체번호" ColumnName="공급업체번호" />
+                <ScalarProperty Name="입고검사서번호" ColumnName="입고검사서번호" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -3891,8 +4357,6 @@ error 6004: The table 'ERP.dbo.현장실적현황' is referenced by a relationsh
                 <ScalarProperty Name="발주확인서번호" ColumnName="발주확인서번호" />
                 <ScalarProperty Name="자재번호" ColumnName="자재번호" />
                 <ScalarProperty Name="수량" ColumnName="수량" />
-                <ScalarProperty Name="납기여부" ColumnName="납기여부" />
-                <ScalarProperty Name="수입검사여부" ColumnName="수입검사여부" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -3945,6 +4409,23 @@ error 6004: The table 'ERP.dbo.현장실적현황' is referenced by a relationsh
                 <ScalarProperty Name="C12월_금액" ColumnName="12월 금액" />
                 <ScalarProperty Name="예산코드" ColumnName="예산코드" />
                 <ScalarProperty Name="신청연도" ColumnName="신청연도" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="불량상세정보">
+            <EntityTypeMapping TypeName="ERPModel.불량상세정보">
+              <MappingFragment StoreEntitySet="불량상세정보">
+                <ScalarProperty Name="불량코드번호" ColumnName="불량코드번호" />
+                <ScalarProperty Name="입고검사서번호" ColumnName="입고검사서번호" />
+                <ScalarProperty Name="불량수량" ColumnName="불량수량" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="불량코드내역">
+            <EntityTypeMapping TypeName="ERPModel.불량코드내역">
+              <MappingFragment StoreEntitySet="불량코드내역">
+                <ScalarProperty Name="불량코드번호" ColumnName="불량코드번호" />
+                <ScalarProperty Name="불량명" ColumnName="불량명" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -4068,6 +4549,17 @@ error 6004: The table 'ERP.dbo.현장실적현황' is referenced by a relationsh
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="생산계획현황">
+            <EntityTypeMapping TypeName="ERPModel.생산계획현황">
+              <MappingFragment StoreEntitySet="생산계획현황">
+                <ScalarProperty Name="생산계획현황번호" ColumnName="생산계획현황번호" />
+                <ScalarProperty Name="작업예정일" ColumnName="작업예정일" />
+                <ScalarProperty Name="작업확정일" ColumnName="작업확정일" />
+                <ScalarProperty Name="수량" ColumnName="수량" />
+                <ScalarProperty Name="제품번호" ColumnName="제품번호" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="세무유형">
             <EntityTypeMapping TypeName="ERPModel.세무유형">
               <MappingFragment StoreEntitySet="세무유형">
@@ -4182,6 +4674,17 @@ error 6004: The table 'ERP.dbo.현장실적현황' is referenced by a relationsh
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="입고검사서">
+            <EntityTypeMapping TypeName="ERPModel.입고검사서">
+              <MappingFragment StoreEntitySet="입고검사서">
+                <ScalarProperty Name="입고검사서번호" ColumnName="입고검사서번호" />
+                <ScalarProperty Name="발주확인서번호" ColumnName="발주확인서번호" />
+                <ScalarProperty Name="자재번호" ColumnName="자재번호" />
+                <ScalarProperty Name="양품수량" ColumnName="양품수량" />
+                <ScalarProperty Name="불량수량" ColumnName="불량수량" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="자금계획달력">
             <EntityTypeMapping TypeName="ERPModel.자금계획달력">
               <MappingFragment StoreEntitySet="자금계획달력">
@@ -4266,14 +4769,30 @@ error 6004: The table 'ERP.dbo.현장실적현황' is referenced by a relationsh
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="작업지시서">
-            <EntityTypeMapping TypeName="ERPModel.작업지시서">
-              <MappingFragment StoreEntitySet="작업지시서">
+          <EntitySetMapping Name="작업지시서11111">
+            <EntityTypeMapping TypeName="ERPModel.작업지시서11111">
+              <MappingFragment StoreEntitySet="작업지시서11111">
                 <ScalarProperty Name="작업지시번호" ColumnName="작업지시번호" />
                 <ScalarProperty Name="제품번호" ColumnName="제품번호" />
                 <ScalarProperty Name="수량" ColumnName="수량" />
                 <ScalarProperty Name="작업지시일" ColumnName="작업지시일" />
                 <ScalarProperty Name="작업완료일" ColumnName="작업완료일" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="작업지시현황">
+            <EntityTypeMapping TypeName="ERPModel.작업지시현황">
+              <MappingFragment StoreEntitySet="작업지시현황">
+                <ScalarProperty Name="작업지시번호" ColumnName="작업지시번호" />
+                <ScalarProperty Name="생산계획현황번호" ColumnName="생산계획현황번호" />
+                <ScalarProperty Name="제품번호" ColumnName="제품번호" />
+                <ScalarProperty Name="수량" ColumnName="수량" />
+                <ScalarProperty Name="작업장번호" ColumnName="작업장번호" />
+                <ScalarProperty Name="작업상태번호" ColumnName="작업상태번호" />
+                <ScalarProperty Name="작업지시일" ColumnName="작업지시일" />
+                <ScalarProperty Name="작업완료_예정_일" ColumnName="작업완료(예정)일" />
+                <ScalarProperty Name="자재명세번호" ColumnName="자재명세번호" />
+                <ScalarProperty Name="공정번호" ColumnName="공정번호" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -4315,16 +4834,12 @@ error 6004: The table 'ERP.dbo.현장실적현황' is referenced by a relationsh
                 <ScalarProperty Name="제품번호" ColumnName="제품번호" />
                 <ScalarProperty Name="제품명" ColumnName="제품명" />
                 <ScalarProperty Name="안전재고량" ColumnName="안전재고량" />
-                <ScalarProperty Name="자재명세번호" ColumnName="자재명세번호" />
                 <ScalarProperty Name="재고량" ColumnName="재고량" />
                 <ScalarProperty Name="품목군" ColumnName="품목군" />
                 <ScalarProperty Name="검사여부" ColumnName="검사여부" />
                 <ScalarProperty Name="일별생산량" ColumnName="일별생산량" />
                 <ScalarProperty Name="표준원가" ColumnName="표준원가" />
                 <ScalarProperty Name="실제원가" ColumnName="실제원가" />
-                <ScalarProperty Name="최종공정" ColumnName="최종공정" />
-                <ScalarProperty Name="전공정" ColumnName="전공정" />
-                <ScalarProperty Name="후공정" ColumnName="후공정" />
                 <ScalarProperty Name="외경" ColumnName="외경" />
                 <ScalarProperty Name="층" ColumnName="층" />
                 <ScalarProperty Name="리드타임" ColumnName="리드타임" />

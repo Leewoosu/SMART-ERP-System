@@ -112,13 +112,13 @@
             this.groupBox1.Controls.Add(this.richTextBox2);
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(906, 651);
+            this.groupBox1.Size = new System.Drawing.Size(1041, 651);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
             // comboBox6
             // 
-            this.comboBox6.Font = new System.Drawing.Font("굴림", 10F);
+            this.comboBox6.Font = new System.Drawing.Font("Gulim", 10F);
             this.comboBox6.FormattingEnabled = true;
             this.comboBox6.Location = new System.Drawing.Point(658, 76);
             this.comboBox6.Name = "comboBox6";
@@ -129,7 +129,7 @@
             // label20
             // 
             this.label20.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.label20.Font = new System.Drawing.Font("굴림", 10F, System.Drawing.FontStyle.Bold);
+            this.label20.Font = new System.Drawing.Font("Gulim", 10F, System.Drawing.FontStyle.Bold);
             this.label20.Location = new System.Drawing.Point(590, 79);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(79, 22);
@@ -140,7 +140,7 @@
             // 
             this.tabControl2.Controls.Add(this.tabPage2);
             this.tabControl2.Controls.Add(this.tabPage3);
-            this.tabControl2.Location = new System.Drawing.Point(542, 105);
+            this.tabControl2.Location = new System.Drawing.Point(680, 105);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
             this.tabControl2.Size = new System.Drawing.Size(354, 417);
@@ -187,7 +187,7 @@
             // label5
             // 
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold);
+            this.label5.Font = new System.Drawing.Font("Gulim", 9F, System.Drawing.FontStyle.Bold);
             this.label5.Location = new System.Drawing.Point(54, 143);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(130, 18);
@@ -204,7 +204,7 @@
             // label4
             // 
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold);
+            this.label4.Font = new System.Drawing.Font("Gulim", 9F, System.Drawing.FontStyle.Bold);
             this.label4.Location = new System.Drawing.Point(54, 116);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(130, 18);
@@ -213,7 +213,7 @@
             // 
             // comboBox9
             // 
-            this.comboBox9.Font = new System.Drawing.Font("굴림", 10F);
+            this.comboBox9.Font = new System.Drawing.Font("Gulim", 10F);
             this.comboBox9.FormattingEnabled = true;
             this.comboBox9.Location = new System.Drawing.Point(114, 84);
             this.comboBox9.Name = "comboBox9";
@@ -232,7 +232,7 @@
             // label21
             // 
             this.label21.BackColor = System.Drawing.Color.Transparent;
-            this.label21.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold);
+            this.label21.Font = new System.Drawing.Font("Gulim", 9F, System.Drawing.FontStyle.Bold);
             this.label21.Location = new System.Drawing.Point(54, 88);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(79, 22);
@@ -241,7 +241,7 @@
             // 
             // comboBox8
             // 
-            this.comboBox8.Font = new System.Drawing.Font("굴림", 10F);
+            this.comboBox8.Font = new System.Drawing.Font("Gulim", 10F);
             this.comboBox8.FormattingEnabled = true;
             this.comboBox8.Location = new System.Drawing.Point(114, 55);
             this.comboBox8.Name = "comboBox8";
@@ -260,7 +260,7 @@
             // label12
             // 
             this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold);
+            this.label12.Font = new System.Drawing.Font("Gulim", 9F, System.Drawing.FontStyle.Bold);
             this.label12.Location = new System.Drawing.Point(54, 59);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(79, 22);
@@ -269,7 +269,7 @@
             // 
             // comboBox7
             // 
-            this.comboBox7.Font = new System.Drawing.Font("굴림", 10F);
+            this.comboBox7.Font = new System.Drawing.Font("Gulim", 10F);
             this.comboBox7.FormattingEnabled = true;
             this.comboBox7.Location = new System.Drawing.Point(114, 26);
             this.comboBox7.Name = "comboBox7";
@@ -287,7 +287,7 @@
             // label13
             // 
             this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold);
+            this.label13.Font = new System.Drawing.Font("Gulim", 9F, System.Drawing.FontStyle.Bold);
             this.label13.Location = new System.Drawing.Point(54, 310);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(130, 18);
@@ -304,7 +304,7 @@
             // label11
             // 
             this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold);
+            this.label11.Font = new System.Drawing.Font("Gulim", 9F, System.Drawing.FontStyle.Bold);
             this.label11.Location = new System.Drawing.Point(54, 264);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(130, 18);
@@ -322,7 +322,7 @@
             // label7
             // 
             this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold);
+            this.label7.Font = new System.Drawing.Font("Gulim", 9F, System.Drawing.FontStyle.Bold);
             this.label7.Location = new System.Drawing.Point(43, 185);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(130, 22);
@@ -340,7 +340,7 @@
             // label6
             // 
             this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold);
+            this.label6.Font = new System.Drawing.Font("Gulim", 9F, System.Drawing.FontStyle.Bold);
             this.label6.Location = new System.Drawing.Point(3, 225);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(130, 22);
@@ -358,7 +358,7 @@
             // label3
             // 
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold);
+            this.label3.Font = new System.Drawing.Font("Gulim", 9F, System.Drawing.FontStyle.Bold);
             this.label3.Location = new System.Drawing.Point(54, 30);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(79, 22);
@@ -398,7 +398,7 @@
             // label19
             // 
             this.label19.BackColor = System.Drawing.Color.Transparent;
-            this.label19.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold);
+            this.label19.Font = new System.Drawing.Font("Gulim", 9F, System.Drawing.FontStyle.Bold);
             this.label19.Location = new System.Drawing.Point(108, 336);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(79, 22);
@@ -415,7 +415,7 @@
             // 
             // comboBox5
             // 
-            this.comboBox5.Font = new System.Drawing.Font("굴림", 10F);
+            this.comboBox5.Font = new System.Drawing.Font("Gulim", 10F);
             this.comboBox5.FormattingEnabled = true;
             this.comboBox5.Location = new System.Drawing.Point(148, 289);
             this.comboBox5.Name = "comboBox5";
@@ -426,7 +426,7 @@
             // label18
             // 
             this.label18.BackColor = System.Drawing.Color.Transparent;
-            this.label18.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold);
+            this.label18.Font = new System.Drawing.Font("Gulim", 9F, System.Drawing.FontStyle.Bold);
             this.label18.Location = new System.Drawing.Point(98, 293);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(79, 22);
@@ -444,7 +444,7 @@
             // label17
             // 
             this.label17.BackColor = System.Drawing.Color.Transparent;
-            this.label17.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold);
+            this.label17.Font = new System.Drawing.Font("Gulim", 9F, System.Drawing.FontStyle.Bold);
             this.label17.Location = new System.Drawing.Point(110, 241);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(79, 22);
@@ -462,7 +462,7 @@
             // label16
             // 
             this.label16.BackColor = System.Drawing.Color.Transparent;
-            this.label16.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold);
+            this.label16.Font = new System.Drawing.Font("Gulim", 9F, System.Drawing.FontStyle.Bold);
             this.label16.Location = new System.Drawing.Point(97, 136);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(79, 22);
@@ -480,7 +480,7 @@
             // label15
             // 
             this.label15.BackColor = System.Drawing.Color.Transparent;
-            this.label15.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold);
+            this.label15.Font = new System.Drawing.Font("Gulim", 9F, System.Drawing.FontStyle.Bold);
             this.label15.Location = new System.Drawing.Point(110, 187);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(79, 22);
@@ -498,7 +498,7 @@
             // label14
             // 
             this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold);
+            this.label14.Font = new System.Drawing.Font("Gulim", 9F, System.Drawing.FontStyle.Bold);
             this.label14.Location = new System.Drawing.Point(97, 87);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(79, 22);
@@ -507,7 +507,7 @@
             // 
             // comboBox1
             // 
-            this.comboBox1.Font = new System.Drawing.Font("굴림", 10F);
+            this.comboBox1.Font = new System.Drawing.Font("Gulim", 10F);
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(402, 76);
             this.comboBox1.Name = "comboBox1";
@@ -518,7 +518,7 @@
             // label1
             // 
             this.label1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.label1.Font = new System.Drawing.Font("굴림", 10F, System.Drawing.FontStyle.Bold);
+            this.label1.Font = new System.Drawing.Font("Gulim", 10F, System.Drawing.FontStyle.Bold);
             this.label1.Location = new System.Drawing.Point(334, 79);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(79, 22);
@@ -542,7 +542,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(13, 105);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(523, 417);
+            this.dataGridView1.Size = new System.Drawing.Size(661, 417);
             this.dataGridView1.TabIndex = 90;
             // 
             // Column1
@@ -597,7 +597,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(186, 77);
+            this.textBox1.Location = new System.Drawing.Point(207, 77);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(82, 21);
             this.textBox1.TabIndex = 89;
@@ -605,18 +605,18 @@
             // 
             // comboBox2
             // 
-            this.comboBox2.Font = new System.Drawing.Font("굴림", 10F);
+            this.comboBox2.Font = new System.Drawing.Font("Gulim", 10F);
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(122, 77);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(59, 21);
+            this.comboBox2.Size = new System.Drawing.Size(79, 21);
             this.comboBox2.TabIndex = 88;
             this.comboBox2.Text = "회사코드";
             // 
             // label2
             // 
             this.label2.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.label2.Font = new System.Drawing.Font("굴림", 10F, System.Drawing.FontStyle.Bold);
+            this.label2.Font = new System.Drawing.Font("Gulim", 10F, System.Drawing.FontStyle.Bold);
             this.label2.Location = new System.Drawing.Point(54, 80);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(79, 22);
@@ -625,7 +625,7 @@
             // 
             // label8
             // 
-            this.label8.Font = new System.Drawing.Font("굴림체", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label8.Font = new System.Drawing.Font("GulimChe", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label8.Location = new System.Drawing.Point(57, 34);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(175, 27);
@@ -644,9 +644,9 @@
             // label9
             // 
             this.label9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label9.Location = new System.Drawing.Point(9, 65);
+            this.label9.Location = new System.Drawing.Point(13, 65);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(889, 1);
+            this.label9.Size = new System.Drawing.Size(1018, 1);
             this.label9.TabIndex = 84;
             // 
             // richTextBox2
@@ -655,17 +655,17 @@
             this.richTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.richTextBox2.Location = new System.Drawing.Point(13, 70);
             this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(883, 32);
+            this.richTextBox2.Size = new System.Drawing.Size(1018, 32);
             this.richTextBox2.TabIndex = 83;
             this.richTextBox2.Text = "";
             // 
-            // 업무용승용차_차량등록
+            // 업무용승용차차량등록
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.groupBox1);
             this.Name = "업무용승용차차량등록";
-            this.Size = new System.Drawing.Size(906, 651);
+            this.Size = new System.Drawing.Size(1044, 645);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.tabControl2.ResumeLayout(false);

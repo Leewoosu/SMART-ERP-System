@@ -45,8 +45,6 @@
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -75,8 +73,6 @@
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.richTextBox2);
             this.groupBox1.Controls.Add(this.dataGridView1);
-            this.groupBox1.Controls.Add(this.comboBox6);
-            this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.textBox4);
             this.groupBox1.Controls.Add(this.comboBox4);
             this.groupBox1.Controls.Add(this.label3);
@@ -97,13 +93,13 @@
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(906, 651);
+            this.groupBox1.Size = new System.Drawing.Size(1041, 651);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(649, 593);
+            this.textBox6.Location = new System.Drawing.Point(782, 593);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(239, 21);
             this.textBox6.TabIndex = 131;
@@ -112,8 +108,8 @@
             // label6
             // 
             this.label6.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.label6.Font = new System.Drawing.Font("굴림", 10F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(563, 596);
+            this.label6.Font = new System.Drawing.Font("Gulim", 10F, System.Drawing.FontStyle.Bold);
+            this.label6.Location = new System.Drawing.Point(696, 596);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(83, 22);
             this.label6.TabIndex = 130;
@@ -125,7 +121,7 @@
             this.richTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.richTextBox2.Location = new System.Drawing.Point(13, 586);
             this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(883, 33);
+            this.richTextBox2.Size = new System.Drawing.Size(1019, 33);
             this.richTextBox2.TabIndex = 129;
             this.richTextBox2.Text = "";
             // 
@@ -148,7 +144,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(11, 134);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(888, 449);
+            this.dataGridView1.Size = new System.Drawing.Size(1021, 449);
             this.dataGridView1.TabIndex = 128;
             // 
             // Column1
@@ -211,29 +207,9 @@
             this.Column12.HeaderText = "당기말감가상각누계액";
             this.Column12.Name = "Column12";
             // 
-            // comboBox6
-            // 
-            this.comboBox6.Font = new System.Drawing.Font("굴림", 10F);
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Location = new System.Drawing.Point(745, 71);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(99, 21);
-            this.comboBox6.TabIndex = 127;
-            this.comboBox6.Text = "계정과목코드";
-            // 
-            // label5
-            // 
-            this.label5.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.label5.Font = new System.Drawing.Font("굴림", 10F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(678, 75);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(79, 22);
-            this.label5.TabIndex = 126;
-            this.label5.Text = "계정과목";
-            // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(582, 100);
+            this.textBox4.Location = new System.Drawing.Point(655, 100);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(82, 21);
             this.textBox4.TabIndex = 125;
@@ -241,19 +217,19 @@
             // 
             // comboBox4
             // 
-            this.comboBox4.Font = new System.Drawing.Font("굴림", 10F);
+            this.comboBox4.Font = new System.Drawing.Font("Gulim", 10F);
             this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(509, 100);
+            this.comboBox4.Location = new System.Drawing.Point(557, 100);
             this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(67, 21);
+            this.comboBox4.Size = new System.Drawing.Size(92, 21);
             this.comboBox4.TabIndex = 124;
             this.comboBox4.Text = "자산코드";
             // 
             // label3
             // 
             this.label3.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.label3.Font = new System.Drawing.Font("굴림", 10F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(491, 102);
+            this.label3.Font = new System.Drawing.Font("Gulim", 10F, System.Drawing.FontStyle.Bold);
+            this.label3.Location = new System.Drawing.Point(534, 101);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(21, 22);
             this.label3.TabIndex = 123;
@@ -261,7 +237,7 @@
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(406, 99);
+            this.textBox5.Location = new System.Drawing.Point(449, 99);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(82, 21);
             this.textBox5.TabIndex = 122;
@@ -269,19 +245,19 @@
             // 
             // comboBox5
             // 
-            this.comboBox5.Font = new System.Drawing.Font("굴림", 10F);
+            this.comboBox5.Font = new System.Drawing.Font("Gulim", 10F);
             this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(331, 99);
+            this.comboBox5.Location = new System.Drawing.Point(349, 99);
             this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(69, 21);
+            this.comboBox5.Size = new System.Drawing.Size(94, 21);
             this.comboBox5.TabIndex = 121;
             this.comboBox5.Text = "자산코드";
             // 
             // label4
             // 
             this.label4.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.label4.Font = new System.Drawing.Font("굴림", 10F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(293, 102);
+            this.label4.Font = new System.Drawing.Font("Gulim", 10F, System.Drawing.FontStyle.Bold);
+            this.label4.Location = new System.Drawing.Point(311, 102);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(79, 22);
             this.label4.TabIndex = 120;
@@ -289,7 +265,7 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(582, 73);
+            this.textBox3.Location = new System.Drawing.Point(656, 73);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(82, 21);
             this.textBox3.TabIndex = 119;
@@ -297,19 +273,19 @@
             // 
             // comboBox3
             // 
-            this.comboBox3.Font = new System.Drawing.Font("굴림", 10F);
+            this.comboBox3.Font = new System.Drawing.Font("Gulim", 10F);
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(509, 73);
+            this.comboBox3.Location = new System.Drawing.Point(558, 73);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(67, 21);
+            this.comboBox3.Size = new System.Drawing.Size(92, 21);
             this.comboBox3.TabIndex = 118;
             this.comboBox3.Text = "계정과목코드";
             // 
             // label11
             // 
             this.label11.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.label11.Font = new System.Drawing.Font("굴림", 10F, System.Drawing.FontStyle.Bold);
-            this.label11.Location = new System.Drawing.Point(491, 75);
+            this.label11.Font = new System.Drawing.Font("Gulim", 10F, System.Drawing.FontStyle.Bold);
+            this.label11.Location = new System.Drawing.Point(534, 75);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(21, 22);
             this.label11.TabIndex = 117;
@@ -317,7 +293,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(406, 72);
+            this.textBox2.Location = new System.Drawing.Point(449, 72);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(82, 21);
             this.textBox2.TabIndex = 116;
@@ -325,19 +301,19 @@
             // 
             // comboBox1
             // 
-            this.comboBox1.Font = new System.Drawing.Font("굴림", 10F);
+            this.comboBox1.Font = new System.Drawing.Font("Gulim", 10F);
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(331, 72);
+            this.comboBox1.Location = new System.Drawing.Point(349, 72);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(69, 21);
+            this.comboBox1.Size = new System.Drawing.Size(94, 21);
             this.comboBox1.TabIndex = 115;
             this.comboBox1.Text = "계정과목코드";
             // 
             // label1
             // 
             this.label1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.label1.Font = new System.Drawing.Font("굴림", 10F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(263, 75);
+            this.label1.Font = new System.Drawing.Font("Gulim", 10F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(281, 75);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(79, 22);
             this.label1.TabIndex = 114;
@@ -345,7 +321,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(166, 73);
+            this.textBox1.Location = new System.Drawing.Point(191, 73);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(82, 21);
             this.textBox1.TabIndex = 113;
@@ -353,18 +329,18 @@
             // 
             // comboBox2
             // 
-            this.comboBox2.Font = new System.Drawing.Font("굴림", 10F);
+            this.comboBox2.Font = new System.Drawing.Font("Gulim", 10F);
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(102, 73);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(59, 21);
+            this.comboBox2.Size = new System.Drawing.Size(84, 21);
             this.comboBox2.TabIndex = 112;
             this.comboBox2.Text = "회사코드";
             // 
             // label2
             // 
             this.label2.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.label2.Font = new System.Drawing.Font("굴림", 10F, System.Drawing.FontStyle.Bold);
+            this.label2.Font = new System.Drawing.Font("Gulim", 10F, System.Drawing.FontStyle.Bold);
             this.label2.Location = new System.Drawing.Point(34, 76);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(79, 22);
@@ -377,13 +353,13 @@
             this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.richTextBox1.Location = new System.Drawing.Point(13, 66);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(883, 64);
+            this.richTextBox1.Size = new System.Drawing.Size(1019, 64);
             this.richTextBox1.TabIndex = 110;
             this.richTextBox1.Text = "";
             // 
             // label8
             // 
-            this.label8.Font = new System.Drawing.Font("굴림체", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label8.Font = new System.Drawing.Font("GulimChe", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label8.Location = new System.Drawing.Point(55, 32);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(196, 27);
@@ -393,9 +369,9 @@
             // label9
             // 
             this.label9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label9.Location = new System.Drawing.Point(7, 63);
+            this.label9.Location = new System.Drawing.Point(13, 63);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(889, 1);
+            this.label9.Size = new System.Drawing.Size(1018, 1);
             this.label9.TabIndex = 108;
             // 
             // 고정자산관리대장
@@ -404,7 +380,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.groupBox1);
             this.Name = "고정자산관리대장";
-            this.Size = new System.Drawing.Size(906, 651);
+            this.Size = new System.Drawing.Size(1044, 645);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -431,8 +407,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
-        private System.Windows.Forms.ComboBox comboBox6;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.Label label3;

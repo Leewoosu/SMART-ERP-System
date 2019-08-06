@@ -30,8 +30,10 @@ namespace ClassLibrary
         public virtual DbSet<경비구분> 경비구분 { get; set; }
         public virtual DbSet<계정과목> 계정과목 { get; set; }
         public virtual DbSet<계정과목그룹> 계정과목그룹 { get; set; }
+        public virtual DbSet<계정과목등록> 계정과목등록 { get; set; }
         public virtual DbSet<고정자산> 고정자산 { get; set; }
         public virtual DbSet<공급업체> 공급업체 { get; set; }
+        public virtual DbSet<공정> 공정 { get; set; }
         public virtual DbSet<공제별세부사항> 공제별세부사항 { get; set; }
         public virtual DbSet<과세별세액> 과세별세액 { get; set; }
         public virtual DbSet<근로소득> 근로소득 { get; set; }
@@ -49,6 +51,7 @@ namespace ClassLibrary
         public virtual DbSet<납품업체> 납품업체 { get; set; }
         public virtual DbSet<메뉴등록> 메뉴등록 { get; set; }
         public virtual DbSet<메뉴별권한설정> 메뉴별권한설정 { get; set; }
+        public virtual DbSet<반품처리서> 반품처리서 { get; set; }
         public virtual DbSet<발주리스트> 발주리스트 { get; set; }
         public virtual DbSet<발주서> 발주서 { get; set; }
         public virtual DbSet<발주확인리스트> 발주확인리스트 { get; set; }
@@ -56,6 +59,8 @@ namespace ClassLibrary
         public virtual DbSet<부가세신고서> 부가세신고서 { get; set; }
         public virtual DbSet<부서등록> 부서등록 { get; set; }
         public virtual DbSet<분기별예산> 분기별예산 { get; set; }
+        public virtual DbSet<불량상세정보> 불량상세정보 { get; set; }
+        public virtual DbSet<불량코드내역> 불량코드내역 { get; set; }
         public virtual DbSet<사업장관할세무서> 사업장관할세무서 { get; set; }
         public virtual DbSet<사업장기본등록사항> 사업장기본등록사항 { get; set; }
         public virtual DbSet<사업장등록> 사업장등록 { get; set; }
@@ -65,6 +70,7 @@ namespace ClassLibrary
         public virtual DbSet<사원정보> 사원정보 { get; set; }
         public virtual DbSet<사원정보등록> 사원정보등록 { get; set; }
         public virtual DbSet<상각방법> 상각방법 { get; set; }
+        public virtual DbSet<생산계획현황> 생산계획현황 { get; set; }
         public virtual DbSet<세무유형> 세무유형 { get; set; }
         public virtual DbSet<소득_세액공제환경설정> 소득_세액공제환경설정 { get; set; }
         public virtual DbSet<수주> 수주 { get; set; }
@@ -75,6 +81,7 @@ namespace ClassLibrary
         public virtual DbSet<역추적> 역추적 { get; set; }
         public virtual DbSet<예산> 예산 { get; set; }
         public virtual DbSet<인사_급여환경설정> 인사_급여환경설정 { get; set; }
+        public virtual DbSet<입고검사서> 입고검사서 { get; set; }
         public virtual DbSet<자금계획달력> 자금계획달력 { get; set; }
         public virtual DbSet<자금과목> 자금과목 { get; set; }
         public virtual DbSet<자재> 자재 { get; set; }
@@ -83,7 +90,8 @@ namespace ClassLibrary
         public virtual DbSet<작업완료확인서> 작업완료확인서 { get; set; }
         public virtual DbSet<작업지시> 작업지시 { get; set; }
         public virtual DbSet<작업지시리스트> 작업지시리스트 { get; set; }
-        public virtual DbSet<작업지시서> 작업지시서 { get; set; }
+        public virtual DbSet<작업지시서11111> 작업지시서11111 { get; set; }
+        public virtual DbSet<작업지시현황> 작업지시현황 { get; set; }
         public virtual DbSet<전표> 전표 { get; set; }
         public virtual DbSet<전표리스트> 전표리스트 { get; set; }
         public virtual DbSet<제품> 제품 { get; set; }

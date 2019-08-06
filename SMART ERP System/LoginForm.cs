@@ -18,6 +18,7 @@ namespace SMART_ERP_System
         public LoginForm()
         {
             InitializeComponent();
+
             this.SetFormLocation();
             loginControl.RecieveLoginForm(this);
         }
@@ -39,6 +40,11 @@ namespace SMART_ERP_System
                 mainForm.SetFormLocation();
                 mainForm.Show();
             }
+        }
+
+        private void LoginControl_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

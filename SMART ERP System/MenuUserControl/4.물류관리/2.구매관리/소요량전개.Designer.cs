@@ -52,14 +52,14 @@
             this.label11 = new System.Windows.Forms.Label();
             this.comboBox8 = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.comboBox9 = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.label14 = new System.Windows.Forms.Label();
+            this.comboBox9 = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -68,7 +68,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("굴림", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label7.Font = new System.Drawing.Font("Gulim", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label7.Location = new System.Drawing.Point(322, 77);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(38, 11);
@@ -86,7 +86,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("굴림", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label6.Font = new System.Drawing.Font("Gulim", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label6.Location = new System.Drawing.Point(322, 51);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(38, 11);
@@ -104,7 +104,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("굴림", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label5.Font = new System.Drawing.Font("Gulim", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label5.Location = new System.Drawing.Point(310, 24);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(49, 11);
@@ -122,7 +122,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("굴림", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label4.Font = new System.Drawing.Font("Gulim", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label4.Location = new System.Drawing.Point(50, 50);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(38, 11);
@@ -201,7 +201,7 @@
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label1.Location = new System.Drawing.Point(7, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(890, 1);
+            this.label1.Size = new System.Drawing.Size(1018, 1);
             this.label1.TabIndex = 18;
             this.label1.Text = "label1";
             // 
@@ -217,7 +217,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("굴림", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label9.Font = new System.Drawing.Font("Gulim", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label9.Location = new System.Drawing.Point(635, 80);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(38, 11);
@@ -235,7 +235,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("굴림", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label10.Font = new System.Drawing.Font("Gulim", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label10.Location = new System.Drawing.Point(623, 53);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(49, 11);
@@ -253,7 +253,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("굴림", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label11.Font = new System.Drawing.Font("Gulim", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label11.Location = new System.Drawing.Point(623, 27);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(49, 11);
@@ -296,30 +296,41 @@
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.comboBox4);
-            this.groupBox1.Font = new System.Drawing.Font("굴림", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.groupBox1.Font = new System.Drawing.Font("Gulim", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.groupBox1.Location = new System.Drawing.Point(7, 29);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(890, 139);
+            this.groupBox1.Size = new System.Drawing.Size(1018, 139);
             this.groupBox1.TabIndex = 43;
             this.groupBox1.TabStop = false;
             // 
-            // comboBox9
+            // label14
             // 
-            this.comboBox9.FormattingEnabled = true;
-            this.comboBox9.Location = new System.Drawing.Point(92, 107);
-            this.comboBox9.Name = "comboBox9";
-            this.comboBox9.Size = new System.Drawing.Size(180, 19);
-            this.comboBox9.TabIndex = 43;
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Gulim", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label14.Location = new System.Drawing.Point(710, 113);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(120, 11);
+            this.label14.TabIndex = 50;
+            this.label14.Text = "자품목 미존재 (반)제품";
             // 
-            // label2
+            // checkBox1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("굴림", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label2.Location = new System.Drawing.Point(38, 110);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 11);
-            this.label2.TabIndex = 44;
-            this.label2.Text = "전개구분";
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(847, 113);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(15, 14);
+            this.checkBox1.TabIndex = 49;
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Gulim", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label13.Location = new System.Drawing.Point(310, 110);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(49, 11);
+            this.label13.TabIndex = 48;
+            this.label13.Text = "계획기간";
             // 
             // textBox1
             // 
@@ -344,34 +355,23 @@
             this.textBox4.Size = new System.Drawing.Size(77, 20);
             this.textBox4.TabIndex = 47;
             // 
-            // label13
+            // comboBox9
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("굴림", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label13.Location = new System.Drawing.Point(310, 110);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(49, 11);
-            this.label13.TabIndex = 48;
-            this.label13.Text = "계획기간";
+            this.comboBox9.FormattingEnabled = true;
+            this.comboBox9.Location = new System.Drawing.Point(92, 107);
+            this.comboBox9.Name = "comboBox9";
+            this.comboBox9.Size = new System.Drawing.Size(180, 19);
+            this.comboBox9.TabIndex = 43;
             // 
-            // checkBox1
+            // label2
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(847, 113);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(15, 14);
-            this.checkBox1.TabIndex = 49;
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("굴림", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label14.Location = new System.Drawing.Point(710, 113);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(120, 11);
-            this.label14.TabIndex = 50;
-            this.label14.Text = "자품목 미존재 (반)제품";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Gulim", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label2.Location = new System.Drawing.Point(38, 110);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(49, 11);
+            this.label2.TabIndex = 44;
+            this.label2.Text = "전개구분";
             // 
             // dataGridView1
             // 
@@ -379,10 +379,10 @@
             this.dataGridView1.Location = new System.Drawing.Point(7, 174);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(890, 467);
+            this.dataGridView1.Size = new System.Drawing.Size(1018, 467);
             this.dataGridView1.TabIndex = 44;
             // 
-            // 물류_구매관리_소요량전개
+            // 소요량전개
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -395,7 +395,7 @@
             this.Controls.Add(this.label1);
             this.Location = new System.Drawing.Point(7, 35);
             this.Name = "소요량전개";
-            this.Size = new System.Drawing.Size(906, 651);
+            this.Size = new System.Drawing.Size(1044, 645);
             this.Load += new System.EventHandler(this.물류_구매관리_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

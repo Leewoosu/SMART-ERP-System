@@ -14,13 +14,19 @@ namespace ClassLibrary
     
     public partial class 발주확인리스트
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public 발주확인리스트()
+        {
+            this.입고검사서 = new HashSet<입고검사서>();
+        }
+    
         public int 발주확인서번호 { get; set; }
         public int 자재번호 { get; set; }
         public int 수량 { get; set; }
-        public int 납기여부 { get; set; }
-        public int 수입검사여부 { get; set; }
     
         public virtual 발주확인서 발주확인서 { get; set; }
         public virtual 자재 자재 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<입고검사서> 입고검사서 { get; set; }
     }
 }

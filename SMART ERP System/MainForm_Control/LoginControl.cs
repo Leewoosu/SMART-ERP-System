@@ -7,8 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ClassLibrary;
-using ClassLibrary.FormHelper;
+using ClassLibrary.EntityData;
 
 namespace SMART_ERP_System
 {
@@ -27,8 +26,10 @@ namespace SMART_ERP_System
         }
 
         private void BtnOk_Click(object sender, EventArgs e)
-        {
-            int checkResult = Check(txbEmployeeCode.Text, txbPassWord.Text);
+        {            
+            int checkResult;
+
+            DB.사원등록.Check(txbEmployeeCode.Text, txbPassWord.Text, out checkResult);
 
             if (checkResult == 1)
             {
@@ -45,45 +46,49 @@ namespace SMART_ERP_System
             Application.Exit();
         }
 
-        private int Check(string id)
-        {
-            int employeeCnt;
-            string employeeName;
+        //public void Check(string id, out int employeeCnt, out string employeeName)
+        //{
+        //    //int employeeCnt;
+        //    //string employeeName;
 
-            using (ERPEntities entity = new ERPEntities())
-            {
-                employeeCnt = entity.사원등록.Where(x => x.사원코드 == id).ToList().Count;
+        //    using (ERPEntities entity = new ERPEntities())
+        //    {
+        //        employeeCnt = entity.사원등록.Where(x => x.사원코드 == id).ToList().Count;
 
-                employeeName = entity.사원등록.Where(x => x.사원코드 == id).Select(x => x.사원명).ToList().FirstOrDefault();
+        //        employeeName = entity.사원등록.Where(x => x.사원코드 == id).Select(x => x.사원명).ToList().FirstOrDefault();
 
-                if (employeeCnt == 1)
-                    txbEmployeeName.Text = employeeName;
-            }
+        //        //if (employeeCnt == 1)
+        //       //     txbEmployeeName.Text = employeeName;
+        //    }
 
-            return employeeCnt;
-        }
+        //    //return employeeCnt;
+        //}
 
-        private int Check(string id, string pwd)
-        {
-            int result;
+        //public void Check(string id, string pwd, out int employeeCnt)
+        //{
+        //    //int employeeCnt;
 
-            using (ERPEntities entity = new ERPEntities())
-            {
-                result = entity.사원등록.Where(x => x.사원코드 == id && x.암호 == pwd).ToList().Count;
-            }
+        //    using (ERPEntities entity = new ERPEntities())
+        //    {
+        //        employeeCnt = entity.사원등록.Where(x => x.사원코드 == id && x.암호 == pwd).ToList().Count;
+        //    }
 
-            return result;
-        }
+        //    //return employeeCnt;
+        //}
 
         private void TxbEmployeeCode_KeyUp(object sender, KeyEventArgs e)
         {
             int checkResult;
+            string employeeName;
+
             if (e.KeyCode == Keys.Enter)
             {
-                checkResult = Check(txbEmployeeCode.Text);
+                //checkResult = Check(txbEmployeeCode.Text);
+                DB.사원등록.Check(txbEmployeeCode.Text, out checkResult, out employeeName);
 
                 if (checkResult == 1)
                 {
+                    txbEmployeeName.Text = employeeName;
                     txbPassWord.Focus();
                 }
                 else

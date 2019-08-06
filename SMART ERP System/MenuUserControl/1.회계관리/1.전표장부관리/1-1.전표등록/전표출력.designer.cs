@@ -85,7 +85,7 @@
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Location = new System.Drawing.Point(2, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(903, 645);
+            this.groupBox1.Size = new System.Drawing.Size(1039, 645);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
@@ -113,7 +113,7 @@
             this.groupBox2.Controls.Add(this.label18);
             this.groupBox2.Location = new System.Drawing.Point(7, 30);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(883, 80);
+            this.groupBox2.Size = new System.Drawing.Size(1025, 80);
             this.groupBox2.TabIndex = 137;
             this.groupBox2.TabStop = false;
             this.groupBox2.Enter += new System.EventHandler(this.GroupBox2_Enter);
@@ -312,7 +312,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(7, 115);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(884, 519);
+            this.dataGridView1.Size = new System.Drawing.Size(1025, 519);
             this.dataGridView1.TabIndex = 132;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
             // 
@@ -411,7 +411,7 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(647, 1);
+            this.button6.Location = new System.Drawing.Point(541, 1);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(75, 23);
             this.button6.TabIndex = 115;
@@ -420,7 +420,7 @@
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(728, 1);
+            this.button7.Location = new System.Drawing.Point(622, 1);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(75, 23);
             this.button7.TabIndex = 114;
@@ -429,7 +429,7 @@
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(809, 1);
+            this.button8.Location = new System.Drawing.Point(703, 1);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(75, 23);
             this.button8.TabIndex = 113;
@@ -438,7 +438,7 @@
             // 
             // button9
             // 
-            this.button9.Location = new System.Drawing.Point(566, 1);
+            this.button9.Location = new System.Drawing.Point(460, 1);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(75, 23);
             this.button9.TabIndex = 112;
@@ -450,7 +450,7 @@
             this.label9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label9.Location = new System.Drawing.Point(7, 25);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(889, 1);
+            this.label9.Size = new System.Drawing.Size(1025, 1);
             this.label9.TabIndex = 111;
             // 
             // 전표출력
@@ -459,7 +459,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.groupBox1);
             this.Name = "전표출력";
-            this.Size = new System.Drawing.Size(906, 651);
+            this.Size = new System.Drawing.Size(1044, 645);
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();

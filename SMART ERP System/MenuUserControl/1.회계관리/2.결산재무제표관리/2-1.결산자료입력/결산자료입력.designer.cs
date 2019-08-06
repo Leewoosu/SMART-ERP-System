@@ -95,7 +95,7 @@
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(906, 651);
+            this.groupBox1.Size = new System.Drawing.Size(1041, 651);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
@@ -106,7 +106,7 @@
             this.tabControl2.Location = new System.Drawing.Point(7, 29);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(891, 616);
+            this.tabControl2.Size = new System.Drawing.Size(1025, 616);
             this.tabControl2.TabIndex = 95;
             // 
             // tabPage2
@@ -115,7 +115,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(883, 590);
+            this.tabPage2.Size = new System.Drawing.Size(1017, 590);
             this.tabPage2.TabIndex = 0;
             this.tabPage2.Text = "계정설정";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -133,10 +133,11 @@
             this.Column7,
             this.Column8,
             this.Column9});
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(883, 590);
+            this.dataGridView1.Size = new System.Drawing.Size(1011, 584);
             this.dataGridView1.TabIndex = 0;
             // 
             // Column1
@@ -186,6 +187,7 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.dataGridView2);
             this.tabPage3.Controls.Add(this.groupBox2);
             this.tabPage3.Controls.Add(this.textBox4);
             this.tabPage3.Controls.Add(this.label4);
@@ -194,11 +196,10 @@
             this.tabPage3.Controls.Add(this.textBox2);
             this.tabPage3.Controls.Add(this.label1);
             this.tabPage3.Controls.Add(this.richTextBox2);
-            this.tabPage3.Controls.Add(this.dataGridView2);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(883, 590);
+            this.tabPage3.Size = new System.Drawing.Size(1017, 590);
             this.tabPage3.TabIndex = 1;
             this.tabPage3.Text = "결산자료";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -213,9 +214,10 @@
             this.groupBox2.Controls.Add(this.textBox1);
             this.groupBox2.Controls.Add(this.comboBox2);
             this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Location = new System.Drawing.Point(2, 1);
+            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox2.Location = new System.Drawing.Point(3, 3);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(883, 44);
+            this.groupBox2.Size = new System.Drawing.Size(1011, 44);
             this.groupBox2.TabIndex = 95;
             this.groupBox2.TabStop = false;
             // 
@@ -255,7 +257,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(214, 9);
+            this.textBox1.Location = new System.Drawing.Point(231, 9);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(82, 21);
             this.textBox1.TabIndex = 89;
@@ -267,7 +269,7 @@
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(150, 9);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(59, 21);
+            this.comboBox2.Size = new System.Drawing.Size(77, 21);
             this.comboBox2.TabIndex = 88;
             this.comboBox2.Text = "회사코드";
             // 
@@ -341,7 +343,7 @@
             this.richTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.richTextBox2.Location = new System.Drawing.Point(0, 556);
             this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(883, 33);
+            this.richTextBox2.Size = new System.Drawing.Size(1011, 33);
             this.richTextBox2.TabIndex = 88;
             this.richTextBox2.Text = "";
             // 
@@ -355,10 +357,11 @@
             this.Column12,
             this.Column14,
             this.Column13});
-            this.dataGridView2.Location = new System.Drawing.Point(-1, 47);
+            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView2.Location = new System.Drawing.Point(3, 47);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowTemplate.Height = 23;
-            this.dataGridView2.Size = new System.Drawing.Size(886, 510);
+            this.dataGridView2.Size = new System.Drawing.Size(1011, 540);
             this.dataGridView2.TabIndex = 87;
             // 
             // Column10
@@ -388,7 +391,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(657, 2);
+            this.button5.Location = new System.Drawing.Point(658, 2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 23);
             this.button5.TabIndex = 94;
@@ -397,7 +400,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(576, 2);
+            this.button4.Location = new System.Drawing.Point(577, 2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 93;
@@ -406,7 +409,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(495, 2);
+            this.button3.Location = new System.Drawing.Point(496, 2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 92;
@@ -415,7 +418,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(416, 2);
+            this.button2.Location = new System.Drawing.Point(417, 2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 91;
@@ -442,7 +445,7 @@
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(819, 2);
+            this.button7.Location = new System.Drawing.Point(820, 2);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(75, 23);
             this.button7.TabIndex = 88;
@@ -451,7 +454,7 @@
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(738, 2);
+            this.button8.Location = new System.Drawing.Point(739, 2);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(75, 23);
             this.button8.TabIndex = 87;
@@ -463,7 +466,7 @@
             this.label9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label9.Location = new System.Drawing.Point(7, 25);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(889, 1);
+            this.label9.Size = new System.Drawing.Size(1025, 1);
             this.label9.TabIndex = 86;
             // 
             // 결산자료입력
@@ -472,7 +475,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.groupBox1);
             this.Name = "결산자료입력";
-            this.Size = new System.Drawing.Size(906, 651);
+            this.Size = new System.Drawing.Size(1044, 645);
             this.groupBox1.ResumeLayout(false);
             this.tabControl2.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);

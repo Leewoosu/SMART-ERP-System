@@ -17,6 +17,7 @@ namespace ClassLibrary
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public 제품()
         {
+            this.생산계획현황 = new HashSet<생산계획현황>();
             this.수주 = new HashSet<수주>();
             this.수주확인리스트 = new HashSet<수주확인리스트>();
             this.자재명세서 = new HashSet<자재명세서>();
@@ -24,27 +25,25 @@ namespace ClassLibrary
             this.작업완료확인서 = new HashSet<작업완료확인서>();
             this.작업지시 = new HashSet<작업지시>();
             this.작업지시리스트 = new HashSet<작업지시리스트>();
-            this.작업지시서 = new HashSet<작업지시서>();
+            this.작업지시서11111 = new HashSet<작업지시서11111>();
         }
     
         public int 제품번호 { get; set; }
         public string 제품명 { get; set; }
         public Nullable<int> 안전재고량 { get; set; }
-        public Nullable<int> 자재명세번호 { get; set; }
         public Nullable<int> 재고량 { get; set; }
         public string 품목군 { get; set; }
         public string 검사여부 { get; set; }
         public Nullable<int> 일별생산량 { get; set; }
         public Nullable<int> 표준원가 { get; set; }
         public Nullable<int> 실제원가 { get; set; }
-        public string 최종공정 { get; set; }
-        public string 전공정 { get; set; }
-        public string 후공정 { get; set; }
         public Nullable<int> 외경 { get; set; }
         public Nullable<int> 층 { get; set; }
         public Nullable<int> 리드타임 { get; set; }
         public Nullable<int> LOT수량 { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<생산계획현황> 생산계획현황 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<수주> 수주 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
@@ -60,6 +59,6 @@ namespace ClassLibrary
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<작업지시리스트> 작업지시리스트 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<작업지시서> 작업지시서 { get; set; }
+        public virtual ICollection<작업지시서11111> 작업지시서11111 { get; set; }
     }
 }

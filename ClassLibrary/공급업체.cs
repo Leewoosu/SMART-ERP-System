@@ -17,6 +17,7 @@ namespace ClassLibrary
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public 공급업체()
         {
+            this.반품처리서 = new HashSet<반품처리서>();
             this.발주서 = new HashSet<발주서>();
             this.발주확인서 = new HashSet<발주확인서>();
         }
@@ -24,6 +25,8 @@ namespace ClassLibrary
         public int 공급업체번호 { get; set; }
         public string 공급업체명 { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<반품처리서> 반품처리서 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<발주서> 발주서 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

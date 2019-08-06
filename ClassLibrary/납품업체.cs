@@ -23,6 +23,7 @@ namespace ClassLibrary
     
         public int 납품업체번호 { get; set; }
         public string 납품업체명 { get; set; }
+        public Nullable<int> 수주확정일 { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<수주> 수주 { get; set; }

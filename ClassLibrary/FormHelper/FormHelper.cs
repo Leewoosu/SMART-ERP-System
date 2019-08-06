@@ -17,5 +17,55 @@ namespace ClassLibrary.FormHelper
                 Screen.PrimaryScreen.Bounds.Width / 2 - form.Size.Width / 2,
                 Screen.PrimaryScreen.Bounds.Height / 2 - form.Size.Height / 2);
         }
+
+        public static void SetMenuItems(this TreeView treeView, 
+            out List<메뉴등록> menuItems)
+        {
+            using (ERPEntities entity = new ERPEntities())
+            {
+                menuItems = entity.메뉴등록.ToList();
+
+                foreach (var item in menuItems)
+                {
+                    if (item.PrentKey == null)
+                        treeView.Nodes.Add(item.CodeNum, item.Title);
+                }
+
+                foreach (var item in menuItems)
+                {
+                    int check = treeView.Nodes.Find(item.PrentKey, true).Length;
+                    if (check > 0)
+                    {
+                        int inputNum = treeView.Nodes.Find(item.PrentKey, true).Length - 1;
+                        treeView.Nodes.Find(item.PrentKey, true)[inputNum].Nodes.Add(item.CodeNum, item.Title);
+                    }
+                }
+            }
+        }
+
+        public static void SetMenuItems(this TreeView treeView, 
+            out List<계정과목등록> MenuItems)
+        {
+            using (ERPEntities entity = new ERPEntities())
+            {
+                MenuItems = entity.계정과목등록.ToList();
+
+                foreach (var item in MenuItems)
+                {
+                    if (item.PrentKey == null)
+                        treeView.Nodes.Add(item.CodeNum, item.Title);
+                }
+
+                foreach (var item in MenuItems)
+                {
+                    int check = treeView.Nodes.Find(item.PrentKey, true).Length;
+                    if (check > 0)
+                    {
+                        int inputNum = treeView.Nodes.Find(item.PrentKey, true).Length - 1;
+                        treeView.Nodes.Find(item.PrentKey, true)[inputNum].Nodes.Add(item.CodeNum, item.Title);
+                    }
+                }
+            }
+        }
     }
 }

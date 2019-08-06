@@ -24,7 +24,7 @@ namespace ClassLibrary
         public string 계정과목명 { get; set; }
         public string 출력계정명 { get; set; }
         public string 계정구분 { get; set; }
-        public bool 차대구분 { get; set; }
+        public Nullable<bool> 차대구분 { get; set; }
         public string 입력구분 { get; set; }
         public string 필수입력여부 { get; set; }
         public int 그룹코드번호 { get; set; }

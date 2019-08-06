@@ -78,8 +78,8 @@ namespace SMART_ERP_System
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
-            this.splitContainer1.Size = new System.Drawing.Size(1240, 720);
-            this.splitContainer1.SplitterDistance = 46;
+            this.splitContainer1.Size = new System.Drawing.Size(1240, 708);
+            this.splitContainer1.SplitterDistance = 45;
             this.splitContainer1.TabIndex = 10;
             // 
             // btnInfo
@@ -115,10 +115,10 @@ namespace SMART_ERP_System
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("HYGothic-Extra", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label1.Location = new System.Drawing.Point(3, 7);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(200, 32);
+            this.label1.Size = new System.Drawing.Size(193, 37);
             this.label1.TabIndex = 2;
             this.label1.Text = "ERP 솔루션";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -138,7 +138,7 @@ namespace SMART_ERP_System
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.metroTabControl);
-            this.splitContainer2.Size = new System.Drawing.Size(1240, 670);
+            this.splitContainer2.Size = new System.Drawing.Size(1240, 659);
             this.splitContainer2.SplitterDistance = 188;
             this.splitContainer2.TabIndex = 2;
             // 
@@ -160,8 +160,8 @@ namespace SMART_ERP_System
             // 
             this.splitContainer3.Panel2.Controls.Add(this.listBox);
             this.splitContainer3.Panel2.Controls.Add(this.treeView);
-            this.splitContainer3.Size = new System.Drawing.Size(188, 670);
-            this.splitContainer3.SplitterDistance = 39;
+            this.splitContainer3.Size = new System.Drawing.Size(188, 659);
+            this.splitContainer3.SplitterDistance = 38;
             this.splitContainer3.TabIndex = 6;
             // 
             // btnMenuSearch
@@ -178,7 +178,7 @@ namespace SMART_ERP_System
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.Image = global::SMART_ERP_System.Properties.Resources.find;
-            this.label2.Location = new System.Drawing.Point(7, 2);
+            this.label2.Location = new System.Drawing.Point(7, 1);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(34, 28);
             this.label2.TabIndex = 3;
@@ -186,7 +186,7 @@ namespace SMART_ERP_System
             // txbMenuSearch
             // 
             this.txbMenuSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.txbMenuSearch.Location = new System.Drawing.Point(47, 7);
+            this.txbMenuSearch.Location = new System.Drawing.Point(47, 6);
             this.txbMenuSearch.Name = "txbMenuSearch";
             this.txbMenuSearch.Size = new System.Drawing.Size(68, 21);
             this.txbMenuSearch.TabIndex = 2;
@@ -208,7 +208,7 @@ namespace SMART_ERP_System
             this.treeView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.treeView.Location = new System.Drawing.Point(0, 0);
             this.treeView.Name = "treeView";
-            this.treeView.Size = new System.Drawing.Size(184, 623);
+            this.treeView.Size = new System.Drawing.Size(184, 613);
             this.treeView.TabIndex = 2;
             this.treeView.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.TreeView_NodeMouseDoubleClick);
             // 
@@ -217,7 +217,7 @@ namespace SMART_ERP_System
             this.metroTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroTabControl.Location = new System.Drawing.Point(0, 0);
             this.metroTabControl.Name = "metroTabControl";
-            this.metroTabControl.Size = new System.Drawing.Size(1044, 666);
+            this.metroTabControl.Size = new System.Drawing.Size(1044, 655);
             this.metroTabControl.TabIndex = 0;
             this.metroTabControl.UseSelectable = true;
             // 
@@ -225,7 +225,7 @@ namespace SMART_ERP_System
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1280, 800);
+            this.ClientSize = new System.Drawing.Size(1280, 788);
             this.Controls.Add(this.splitContainer1);
             this.Name = "MainForm";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
@@ -260,46 +260,6 @@ namespace SMART_ERP_System
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txbMenuSearch;
         private System.Windows.Forms.Button btnInfo;
-        private 전표등록 전표등록;
-        private 전표출력 전표출력;
-        private 분개장 분개장;
-        private 결산자료입력 결산자료입력;
-        private 합계잔액시산표 합계잔액시산표;
-        private 재무상태표 재무상태표;
-        private 손익계산서 손익계산서;
-        private 원가보고서 원가보고서;
-        private 고정자산등록 고정자산등록;
-        private 고정자산관리대장 고정자산관리대장;
-        private 업무용승용차차량등록 업무용승용차차량등록;
-        private 계정과목등록 계정과목등록;
-        private 소득세액공제환경설정 소득세액공제환경설정;
-        private 인사급여환경설정 인사급여환경설정;
-        private 인사정보등록 인사정보등록;
-        private 급여입력 급여입력;
-        private 급여대장 급여대장;
-        private 퇴직기준설정 퇴직기준설정;
-        private 퇴직금산정 퇴직금산정;
-        private 퇴직금산정현황 퇴직금산정현황;
-        private BOM등록및정전개 BOM등록및정전개;
-        private 불량유형등록 불량유형등록;
-        private 생산현황조회 생산현황조회;
-        private 생산실적입력 생산실적입력;
-        private 일일주간생산일보 일일주간생산일보;
-        private 재공관리 재공관리;
-        private 외주입고 외주입고;
-        private 외주자재출고 외주자재출고;
-        private 외주발주현황 외주발주현황;
-        private 청구등록 청구등록;
-        private 입고검사등록 입고검사등록;
-        private 발주등록 발주등록;
-        private 입고처리 입고처리;
-        private 소요량전개 소요량전개;
-        private 발주현황 발주현황;
-        private 입고현황 입고현황;
-        private 청구현황 청구현황;
-        private 자재등록 자재등록;        
-        private 품목단가등록 품목단가등록;
-        private 출고처리 출고처리;
 
         private MetroFramework.Controls.MetroTabControl metroTabControl;
         private Button btnMenuSearch;
